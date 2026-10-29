@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zgoda na wizerunek · Chera Photography</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#13201a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#a0aa8b;--bg:#13201a;--bg-2:#1c2d24;--bg-3:#22362b;--line:#3c5446;
+  --ink:#f5f0e8;--muted:#d6cfc1;--soft:#c9c2b4;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Josefin Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:#d3d9c4}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:760px;margin:0 auto;padding:24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:8px 32px}
+header img{height:68px;width:auto}
+.eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.2rem,6vw,3.2rem);line-height:1.05;margin:12px 0 16px}
+h2{font-family:var(--serif);font-weight:500;font-size:1.6rem;margin:0 0 12px}
+.lead{color:var(--muted)}
+form{margin-top:32px;display:flex;flex-direction:column;gap:28px}
+fieldset{border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:16px}
+legend{padding:0 8px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+label.f{display:flex;flex-direction:column;gap:6px;font-size:15px}
+input[type=text],input[type=email],input[type=tel],input[type=date],textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);padding:12px 14px;min-height:48px;border-radius:2px;width:100%}
+input:focus,textarea:focus{border-color:var(--accent);outline:none}
+textarea{min-height:80px;resize:vertical}
+.check{display:flex;gap:12px;align-items:flex-start;font-size:15px;cursor:pointer}
+.check input{width:22px;height:22px;flex:none;margin-top:2px;accent-color:var(--accent)}
+.hint{font-size:13px;color:var(--soft)}
+.opiekun[hidden]{display:none}
+.opiekun{display:flex;flex-direction:column;gap:16px;border-top:1px dashed var(--line);padding-top:16px}
+.clause{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:8px}
+.clause ul{padding-left:20px;display:flex;flex-direction:column;gap:4px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font:inherit;display:inline-block;padding:16px 28px;letter-spacing:.1em;text-transform:uppercase;font-size:14px;min-height:48px;cursor:pointer;text-decoration:none;border-radius:2px}
+.btn.solid{background:var(--accent);color:var(--bg);font-weight:600;border:0}
+.btn.solid:hover{background:var(--ink)}
+.btn.line{background:none;border:1px solid var(--ink);color:var(--ink)}
+.btn.line:hover{border-color:var(--accent);color:var(--accent)}
+.err{color:#ffb4a8;font-size:15px}
+.ok{background:var(--bg-2);border:1px solid var(--accent);padding:20px;display:none}
+.ok.on{display:block}
+footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-size:13px;color:var(--soft)}
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  header img{filter:invert(1)}
+  .eyebrow,legend{color:#000}
+  input,textarea{background:#fff;color:#000;border:0;border-bottom:1px solid #000;min-height:28px}
+  fieldset{border:1px solid #000;break-inside:avoid}
+  .btns,.ok,.noprint{display:none!important}
+  .clause{color:#000}
+  .opiekun[hidden]{display:flex}
+  .sig{display:block!important}
+}
+.sig{display:none;margin-top:24px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a href="index.html"><img src="img/logo-chera-photography.png" alt="Chera Photography - strona główna" width="679" height="368"></a>
+  </header>
+
+  <p class="eyebrow">Zgoda na wizerunek</p>
+  <h1>Dziękuję, że jesteś w kadrze.</h1>
+  <p class="lead">Chcę pokazywać zdjęcia, na których jesteś, w moim portfolio. Zajmie Ci to minutę. Zgoda jest dobrowolna, nieodpłatna i możesz ją w każdej chwili wycofać jednym mailem.</p>
+
+  <form id="zgoda" novalidate>
+    <fieldset>
+      <legend>Twoje dane</legend>
+      <label class="f">Imię i nazwisko *<input type="text" name="imie" autocomplete="name" required></label>
+      <label class="f">E-mail lub telefon *<input type="text" name="kontakt" autocomplete="email" required></label>
+      <label class="f">Wydarzenie i data *<input type="text" name="wydarzenie" placeholder="np. King of Poland, 12.05.2026" required></label>
+      <label class="f">Które zdjęcia? <span class="hint">Opisz siebie albo zdjęcie, np. „kierowca auta nr 13, czerwony kask”. Możesz zostawić puste, jeśli zgoda dotyczy wszystkich zdjęć z tego wydarzenia.</span><textarea name="zdjecia"></textarea></label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Na co się zgadzasz</legend>
+      <p class="hint">Zaznacz to, na co się zgadzasz. Możesz wybrać tylko część.</p>
+      <label class="check"><input type="checkbox" name="zakres" value="portfolio i galeria na stronie internetowej"> Portfolio i galeria na stronie internetowej</label>
+      <label class="check"><input type="checkbox" name="zakres" value="media społecznościowe (Instagram, Facebook, LinkedIn)"> Media społecznościowe (Instagram, Facebook, LinkedIn)</label>
+      <label class="check"><input type="checkbox" name="zakres" value="materiały promocyjne usług fotograficznych (oferta, prezentacje, druk)"> Materiały promocyjne moich usług fotograficznych (oferta, prezentacje, druk)</label>
+      <label class="check"><input type="checkbox" name="zakres" value="konkursy i wystawy fotograficzne"> Konkursy i wystawy fotograficzne</label>
+      <label class="check"><input type="checkbox" name="podpis_imieniem" value="tak"> Możesz podpisać zdjęcie moim imieniem lub oznaczyć mój profil</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Zdjęcie dziecka</legend>
+      <label class="check"><input type="checkbox" id="dziecko" name="dziecko" value="tak"> Wyrażam zgodę jako rodzic lub opiekun prawny osoby niepełnoletniej</label>
+      <div class="opiekun" id="opiekun" hidden>
+        <label class="f">Imię i nazwisko dziecka *<input type="text" name="imie_dziecka"></label>
+        <p class="hint">Dane osoby wypełniającej (rodzica lub opiekuna) podaj w sekcji „Twoje dane”.</p>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Informacja o danych osobowych (RODO)</legend>
+      <div class="clause">
+        <p>Administratorem Twoich danych (wizerunku, imienia i nazwiska, danych kontaktowych) jest <strong>Katarzyna Wójcik, Chera Photography</strong>, kontakt: <a href="mailto:katarzynawojcik1@gmail.com">katarzynawojcik1@gmail.com</a>.</p>
+        <ul>
+          <li><strong>Cel:</strong> publikacja zdjęć w zakresie zaznaczonym powyżej oraz przechowywanie dowodu Twojej zgody.</li>
+          <li><strong>Podstawa:</strong> Twoja zgoda (art. 6 ust. 1 lit. a RODO) oraz zezwolenie na rozpowszechnianie wizerunku (art. 81 ustawy o prawie autorskim).</li>
+          <li><strong>Okres:</strong> do czasu wycofania zgody. Po wycofaniu usunę zdjęcia w ciągu 7 dni z miejsc, którymi zarządzam; dowód zgody przechowam do czasu przedawnienia ewentualnych roszczeń.</li>
+          <li><strong>Odbiorcy:</strong> dostawcy usług hostingu i poczty (m.in. GitHub, Google) oraz serwisy społecznościowe, jeśli wyrazisz na nie zgodę. Część z nich może przetwarzać dane poza EOG na podstawie standardowych klauzul umownych.</li>
+          <li><strong>Twoje prawa:</strong> dostęp do danych, ich sprostowanie, usunięcie, ograniczenie przetwarzania, przeniesienie, wycofanie zgody w dowolnym momencie (bez wpływu na wcześniejsze przetwarzanie) oraz skarga do Prezesa UODO.</li>
+          <li>Podanie danych i wyrażenie zgody jest dobrowolne. Brak zgody oznacza tylko, że nie opublikuję zdjęć z Tobą.</li>
+        </ul>
+      </div>
+      <label class="check"><input type="checkbox" name="oswiadczenie" value="tak" required> * Zapoznałam/em się z informacją powyżej i wyrażam nieodpłatnie zgodę na rozpowszechnianie mojego wizerunku (lub wizerunku dziecka) w zaznaczonym zakresie, bez ograniczeń czasowych i terytorialnych, do czasu jej wycofania.</label>
+    </fieldset>
+
+    <div class="sig"><p>Data i czytelny podpis: ______________________________________</p></div>
+
+    <p class="err" id="err" role="alert" hidden></p>
+    <div class="btns">
+      <button class="btn solid" type="submit">Wyślij zgodę</button>
+      <button class="btn line noprint" type="button" id="drukuj">Wersja do druku</button>
+    </div>
+    <div class="ok" id="ok" role="status">
+      <h2>Prawie gotowe</h2>
+      <p>Otworzyła się wiadomość e-mail z treścią zgody. Wystarczy ją <strong>wysłać</strong>. Jeśli nic się nie otworzyło, skopiuj treść i wyślij ją na <a href="mailto:katarzynawojcik1@gmail.com">katarzynawojcik1@gmail.com</a>.</p>
+      <div class="btns" style="margin-top:12px"><button class="btn line" type="button" id="kopiuj">Skopiuj treść zgody</button></div>
+    </div>
+  </form>
+
+  <footer>Chera Photography · Zgodę możesz wycofać w każdej chwili, pisząc na katarzynawojcik1@gmail.com.</footer>
+</div>
+
+<script>
+const f = document.getElementById('zgoda'), err = document.getElementById('err');
+const dz = document.getElementById('dziecko'), op = document.getElementById('opiekun');
+dz.addEventListener('change', () => { op.hidden = !dz.checked; });
+let tekst = '';
+function zbuduj(){
+  const d = new FormData(f);
+  const zakres = d.getAll('zakres');
+  const teraz = new Date().toLocaleString('pl-PL');
+  return [
+    'ZGODA NA WIZERUNEK - Chera Photography',
+    '',
+    'Imię i nazwisko: ' + d.get('imie'),
+    'Kontakt: ' + d.get('kontakt'),
+    'Wydarzenie i data: ' + d.get('wydarzenie'),
+    'Zdjęcia: ' + (d.get('zdjecia') || 'wszystkie zdjęcia z tego wydarzenia'),
+    d.get('dziecko') ? 'Zgoda rodzica/opiekuna dla: ' + d.get('imie_dziecka') : '',
+    '',
+    'Zakres zgody:',
+    ...zakres.map(z => ' - ' + z),
+    'Podpisanie zdjęcia imieniem / oznaczenie profilu: ' + (d.get('podpis_imieniem') ? 'TAK' : 'NIE'),
+    '',
+    'Oświadczam, że zapoznałam/em się z informacją o przetwarzaniu danych osobowych i wyrażam nieodpłatnie zgodę na rozpowszechnianie mojego wizerunku (lub wizerunku dziecka) w zaznaczonym zakresie, bez ograniczeń czasowych i terytorialnych, do czasu jej wycofania.',
+    '',
+    'Data i godzina wypełnienia: ' + teraz
+  ].filter((l, i, a) => !(l === '' && a[i - 1] === '')).join('\n');
+}
+f.addEventListener('submit', e => {
+  e.preventDefault();
+  const d = new FormData(f), braki = [];
+  if (!d.get('imie')) braki.push('imię i nazwisko');
+  if (!d.get('kontakt')) braki.push('e-mail lub telefon');
+  if (!d.get('wydarzenie')) braki.push('wydarzenie i datę');
+  if (!d.getAll('zakres').length) braki.push('co najmniej jeden zakres zgody');
+  if (d.get('dziecko') && !d.get('imie_dziecka')) braki.push('imię i nazwisko dziecka');
+  if (!d.get('oswiadczenie')) braki.push('zaznaczenie oświadczenia');
+  if (braki.length) { err.textContent = 'Uzupełnij: ' + braki.join(', ') + '.'; err.hidden = false; err.scrollIntoView({ block: 'center' }); return; }
+  err.hidden = true;
+  tekst = zbuduj();
+  const temat = 'Zgoda na wizerunek - ' + d.get('imie');
+  location.href = 'mailto:katarzynawojcik1@gmail.com?subject=' + encodeURIComponent(temat) + '&body=' + encodeURIComponent(tekst);
+  document.getElementById('ok').classList.add('on');
+});
+document.getElementById('kopiuj').addEventListener('click', async e => {
+  try { await navigator.clipboard.writeText(tekst || zbuduj()); e.target.textContent = 'Skopiowano'; }
+  catch { e.target.textContent = 'Nie udało się skopiować'; }
+});
+document.getElementById('drukuj').addEventListener('click', () => window.print());
+</script>
+</body>
+</html>

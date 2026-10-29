@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="img/favicon-64.png">
+<link rel="apple-touch-icon" href="img/favicon-180.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oferta fotograficzna · Chera Photography</title>
+<meta name="description" content="Sesje wizerunkowe, reportaż z wydarzeń biznesowych i okolicznościowych, rolki. Chera Photography - fotografia, Warszawa i okolice.">
+<meta name="theme-color" content="#13201a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+/* Akcent: limonka, jak na stronie głównej. Złoto: --accent:#c9a46a */
+:root{
+  --accent:#a0aa8b;
+  --bg:#13201a;--bg-2:#1c2d24;--bg-3:#22362b;--bg-4:#2a4033;
+  --line:#3c5446;
+  --ink:#f5f0e8;--muted:#d6cfc1;--soft:#c9c2b4;
+  --cream:#f5f0e8;--brown:#4d5a3c;--text-dark:#33443a;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Josefin Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:#d3d9c4}a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1200px;margin:0 auto;padding-inline:24px}
+.eyebrow{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent)}
+h1,h2,h3{font-family:var(--serif);font-weight:500}
+h2{font-size:clamp(2rem,3.6vw,3rem);line-height:1.1}
+.lead{font-size:18px;color:var(--muted);max-width:520px}
+.btns{display:flex;flex-wrap:wrap;gap:16px}
+.btn{display:inline-block;padding:16px 28px;text-decoration:none;letter-spacing:.1em;text-transform:uppercase;font-size:14px;min-height:48px;transition:background .25s,color .25s,border-color .25s}
+.btn.solid{background:var(--accent);color:var(--bg);font-weight:600}
+.btn.solid:hover{background:var(--ink);color:var(--bg)}
+.btn.line{border:1px solid var(--ink);color:var(--ink);padding:15px 27px}
+.btn.line:hover{border-color:var(--accent);color:var(--accent)}
+
+/* nagłówek */
+header .wrap{padding-block:24px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:.02em;color:var(--ink);text-decoration:none}
+.brand span{font-style:italic;color:var(--accent)}
+.brand img{height:74px;width:auto}
+nav{display:flex;flex-wrap:wrap;gap:24px;font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+nav a{text-decoration:none}
+@media (max-width:640px){nav .hide-m{display:none}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:center;padding-block:56px 96px}
+.hero-txt{display:flex;flex-direction:column;gap:28px}
+.hero h1{font-size:clamp(2.5rem,4.6vw,3.9rem);line-height:1.05}
+.motto{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--soft)}
+.hero-img{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.hero-img figure{background:var(--bg-3);overflow:hidden;min-height:222px}
+.hero-img figure:first-child{grid-row:span 2;min-height:460px}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+
+/* rodzaje (jasna sekcja) */
+.light{background:var(--cream);color:var(--bg)}
+.light .wrap{padding-block:96px;display:flex;flex-direction:column;gap:48px}
+.light .eyebrow{color:var(--brown)}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:680px}
+.types{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.types article{background:#fff;padding:32px;display:flex;flex-direction:column;gap:14px}
+.types .n{font-family:var(--serif);font-size:40px;color:var(--brown);line-height:1}
+.types h3{font-weight:600;font-size:28px}
+.types p{color:var(--text-dark)}
+
+/* kadry */
+.kadry .wrap{padding-block:96px 0;display:flex;flex-direction:column;gap:32px}
+.kadry .sec-head p{color:var(--muted)}
+.kgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px}
+.kgrid button{display:block;width:100%;aspect-ratio:3/2;padding:0;border:0;background:var(--bg-3);cursor:zoom-in;overflow:hidden}
+.kgrid img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.kgrid button:hover img{transform:scale(1.03)}
+.more{font-size:14px;letter-spacing:.14em;text-transform:uppercase}
+
+/* pakiety */
+.pakiety{padding-block:96px;display:flex;flex-direction:column;gap:56px}
+.pakiety .sec-head p{color:var(--muted)}
+.group{display:flex;flex-direction:column;gap:20px}
+.group>h3{font-size:clamp(1.6rem,2.4vw,2rem)}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.pack{border:1px solid var(--line);padding:36px;display:flex;flex-direction:column;gap:20px}
+.pack.star{border-color:var(--accent);background:var(--bg-2)}
+.pack-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.pack h4{font-size:15px;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.pack.star h4{color:var(--accent)}
+.price{font-family:var(--serif);font-size:clamp(2.2rem,3.4vw,2.75rem);font-weight:500;line-height:1;white-space:nowrap}
+.pack ul{padding-left:20px;line-height:1.9;color:var(--muted);flex-grow:1}
+.pack .btn{align-self:flex-start}
+.addon{background:var(--bg-2);padding:32px 36px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center}
+.addon h3{font-size:30px;margin-bottom:8px}
+.addon p{color:var(--muted);font-size:16px}
+.rows{display:flex;flex-direction:column;gap:10px}
+.rows div{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.rows div:last-child{border:0;padding:0}
+.rows b{font-weight:600;white-space:nowrap}
+.fine{font-size:15px;color:var(--soft)}
+
+/* jak pracuję */
+.jak{background:var(--bg-2)}
+.jak .wrap{padding-block:96px;display:flex;flex-direction:column;gap:48px}
+.steps{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px}
+.steps li{display:flex;flex-direction:column;gap:10px;border-top:1px solid var(--accent);padding-top:20px}
+.steps .k{font-size:14px;letter-spacing:.18em;color:var(--accent)}
+.steps strong{font-family:var(--serif);font-size:26px;font-weight:600}
+.steps span:last-child{font-size:16px;color:var(--muted)}
+
+/* kontakt */
+.kontakt{padding-block:112px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:24px}
+.kontakt h2{font-size:clamp(2.2rem,4vw,3.4rem);max-width:760px;line-height:1.05}
+.kontakt p{color:var(--muted);max-width:560px;font-size:18px}
+.kontakt .btns{justify-content:center;padding-top:8px}
+footer{border-top:1px solid var(--bg-4)}
+footer .wrap{padding-block:28px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:14px;color:var(--soft)}
+
+/* powiększenie */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(19,32,26,.97);display:none;align-items:center;justify-content:center;padding:64px 16px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain}
+.lb button{position:absolute;width:48px;height:48px;border:1px solid var(--line);background:rgba(19,32,26,.7);color:var(--ink);cursor:pointer;display:grid;place-items:center}
+.lb button:hover{border-color:var(--accent);color:var(--accent)}
+.lb .x{top:14px;right:14px}.lb .prev{left:14px;top:50%;transform:translateY(-50%)}.lb .next{right:14px;top:50%;transform:translateY(-50%)}
+.lb svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="img/logo-chera-photography.png" alt="Chera Photography - strona główna" width="679" height="368"></a>
+    <nav aria-label="Menu">
+      <a class="hide-m" href="#oferta">Oferta</a>
+      <a class="hide-m" href="#pakiety">Pakiety</a>
+      <a class="hide-m" href="#jak">Jak pracuję</a>
+      <a href="index.html">Strona główna</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div class="hero-txt">
+    <p class="eyebrow">Reportaż z wydarzeń i sesje wizerunkowe</p>
+    <h1>Zdjęcia, na których wyglądasz jak Ty. Tylko w najlepszym dniu.</h1>
+    <p class="lead">Fotografuję wydarzenia biznesowe, imprezy okolicznościowe i ludzi, którzy budują swoją markę. Bez sztywnego pozowania, z uważnym okiem reportażystki.</p>
+    <div class="btns">
+      <a class="btn solid" href="#pakiety">Zobacz pakiety</a>
+      <a class="btn line" href="#kontakt">Zarezerwuj termin</a>
+    </div>
+    <p class="motto">Głowa na szpilkach, serce w lesie.</p>
+  </div>
+  <div class="hero-img">
+    <figure><img src="https://patrolek1313.github.io/galeria/spotkania-i-wydarzenia/duze/spotkania-i-wydarzenia-031.webp" alt="Scena podczas gali" fetchpriority="high"></figure>
+    <figure><img src="https://patrolek1313.github.io/galeria/konferencje-i-szkolenia/duze/konferencje-i-szkolenia-002.webp" alt="Publiczność konferencji"></figure>
+    <figure><img src="https://patrolek1313.github.io/galeria/konferencje-i-szkolenia/duze/konferencje-i-szkolenia-001.webp" alt="Prelegent na konferencji"></figure>
+  </div>
+</section>
+
+<section class="light" id="oferta">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">W czym mogę pomóc</p>
+      <h2>Trzy rodzaje zleceń, jedno podejście: naturalnie i z charakterem</h2>
+    </div>
+    <div class="types">
+      <article><p class="n">01</p><h3>Eventy biznesowe</h3><p>Konferencje, warsztaty, spotkania networkingowe, premiery. Reportaż, który pokazuje energię wydarzenia, plus zdjęcia prelegentów gotowe do publikacji.</p></article>
+      <article><p class="n">02</p><h3>Imprezy okolicznościowe</h3><p>Urodziny, jubileusze, przyjęcia firmowe i rodzinne. Dyskretna obecność, prawdziwe emocje, żadnego ustawiania gości pod ścianką.</p></article>
+      <article><p class="n">03</p><h3>Sesje wizerunkowe</h3><p>Zdjęcia do LinkedIn, Instagrama, strony i materiałów prasowych. Dla ekspertek, przedsiębiorczyń i zespołów, które chcą wyglądać profesjonalnie, ale po ludzku.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="kadry" id="kadry">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Kadry</p>
+      <h2>Wybrane zdjęcia: konferencje, spotkania i wydarzenia</h2>
+      <p>Kliknij zdjęcie, żeby je powiększyć.</p>
+    </div>
+    <div class="kgrid" id="kgrid"></div>
+    <a class="more" href="https://patrolek1313.github.io/galeria/">Zobacz całą galerię</a>
+  </div>
+</section>
+
+<section class="wrap pakiety" id="pakiety">
+  <div class="sec-head">
+    <p class="eyebrow">Pakiety</p>
+    <h2>Jasne zasady, konkretne liczby</h2>
+    <p>Wszystkie zdjęcia przechodzą indywidualną obróbkę i trafiają do prywatnej galerii online. Podane ceny są kwotami końcowymi.</p>
+  </div>
+
+  <div class="group">
+    <h3>Sesje wizerunkowe</h3>
+    <div class="packs">
+      <article class="pack">
+        <div class="pack-top"><h4>Start</h4><p class="price">890 zł</p></div>
+        <ul><li>60 minut zdjęć, 1 lokalizacja</li><li>1 stylizacja</li><li>15 zdjęć w pełnej obróbce</li><li>Kadry poziome i pionowe pod social media</li><li>Galeria online w 7 dni roboczych</li></ul>
+        <a class="btn line" href="mailto:katarzynawojcik1@gmail.com?subject=Sesja%20wizerunkowa%20-%20pakiet%20Start">Wybieram Start</a>
+      </article>
+      <article class="pack star">
+        <div class="pack-top"><h4>Marka osobista</h4><p class="price">1 690 zł</p></div>
+        <ul><li>2 godziny zdjęć, do 2 lokalizacji</li><li>Do 3 stylizacji</li><li>40 zdjęć w pełnej obróbce</li><li>Krótka konsultacja przed sesją: cel, styl, miejsca</li><li>Zestaw kadrów pod LinkedIn, IG i stronę www</li><li>Galeria online w 10 dni roboczych</li></ul>
+        <a class="btn solid" href="mailto:katarzynawojcik1@gmail.com?subject=Sesja%20wizerunkowa%20-%20pakiet%20Marka%20osobista">Wybieram Markę osobistą</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="group">
+    <h3>Reportaż z wydarzeń biznesowych i okolicznościowych</h3>
+    <div class="packs">
+      <article class="pack">
+        <div class="pack-top"><h4>Do 3 godzin</h4><p class="price">1 490 zł</p></div>
+        <ul><li>Warsztat, spotkanie, przyjęcie, urodziny</li><li>Min. 120 zdjęć w obróbce</li><li>Kilka zdjęć zapowiadających w 48 h</li><li>Pełna galeria w 7 dni roboczych</li></ul>
+        <a class="btn line" href="mailto:katarzynawojcik1@gmail.com?subject=Reporta%C5%BC%20-%20do%203%20godzin">Zapytaj o termin</a>
+      </article>
+      <article class="pack">
+        <div class="pack-top"><h4>Cały dzień, do 8 godzin</h4><p class="price">od 3 490 zł</p></div>
+        <ul><li>Konferencja, gala, jubileusz firmy</li><li>Min. 350 zdjęć w obróbce</li><li>Zdjęcia prelegentów i partnerów jako osobny folder</li><li>Kilka zdjęć zapowiadających tego samego dnia</li><li>Pełna galeria w 10 dni roboczych</li></ul>
+        <a class="btn line" href="mailto:katarzynawojcik1@gmail.com?subject=Reporta%C5%BC%20-%20ca%C5%82y%20dzie%C5%84">Zapytaj o termin</a>
+      </article>
+    </div>
+  </div>
+
+  <div class="addon">
+    <div><h3>Dodatek: rolki</h3><p>Krótkie pionowe wideo do Instagrama, TikToka i LinkedIn, nagrywane podczas sesji lub wydarzenia.</p></div>
+    <div class="rows"><div><span>1 rolka, 15-30 s, z montażem</span><b>350 zł</b></div><div><span>3 rolki, 15-30 s, z montażem</span><b>890 zł</b></div></div>
+  </div>
+
+  <p class="fine">Dojazd w Warszawie w cenie. Poza Warszawą doliczam koszt dojazdu. Rezerwacja terminu po wpłacie zadatku 30%, do każdego zlecenia wystawiam rachunek. Organizujesz warsztat lub konferencję? Przygotuję specjalną ofertę dla uczestników Twojego wydarzenia.</p>
+</section>
+
+<section class="jak" id="jak">
+  <div class="wrap">
+    <h2>Jak pracuję</h2>
+    <ol class="steps">
+      <li><span class="k">KROK 1</span><strong>Rozmowa</strong><span>Mówisz, do czego potrzebujesz zdjęć. Dobieram pakiet i termin.</span></li>
+      <li><span class="k">KROK 2</span><strong>Przygotowanie</strong><span>Wysyłam krótką ściągę: co ubrać, jak się przygotować, czego unikać.</span></li>
+      <li><span class="k">KROK 3</span><strong>Zdjęcia</strong><span>Spokojnie i bez napięcia. Podpowiadam, jak stanąć, resztę robi rozmowa.</span></li>
+      <li><span class="k">KROK 4</span><strong>Galeria</strong><span>Dostajesz prywatny link z gotowymi zdjęciami do pobrania i publikacji.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap kontakt" id="kontakt">
+  <h2>Masz wydarzenie albo potrzebujesz nowych zdjęć?</h2>
+  <p>Napisz, kiedy i do czego. Odpowiadam w ciągu 24 godzin z propozycją pakietu.</p>
+  <div class="btns">
+    <a class="btn solid" href="mailto:katarzynawojcik1@gmail.com?subject=Zapytanie%20o%20zdj%C4%99cia">Napisz e-mail</a>
+    <a class="btn line" href="https://www.linkedin.com/in/katarzynawojcik1">LinkedIn</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Chera Photography · Warszawa i okolice</span>
+    <a href="index.html">Strona główna</a>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <img id="lb-img" alt="">
+  <button class="prev" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <button class="next" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+</div>
+
+<script>
+/* KADRY: zdjęcia z Twojej galerii (manifest.json). Kategorie i liczba zdjęć: */
+const BASE = 'https://patrolek1313.github.io/galeria/';
+const KATEGORIE = ['konferencje-i-szkolenia', 'spotkania-i-wydarzenia'];
+const NA_KATEGORIE = 9;
+
+const kgrid = document.getElementById('kgrid');
+const lb = document.getElementById('lb'), lbImg = document.getElementById('lb-img');
+let lista = [], idx = 0, wroc = null;
+
+fetch(BASE + 'manifest.json').then(r => r.json()).then(man => {
+  KATEGORIE.map(s => man.find(k => k.slug === s)).filter(Boolean).forEach(k => {
+    k.zdjecia.slice(0, NA_KATEGORIE).forEach((z, i) => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', k.kategoria + ' - powiększ zdjęcie ' + (i + 1));
+      const img = new Image();
+      img.loading = 'lazy'; img.decoding = 'async';
+      img.src = BASE + z.mini; img.alt = k.kategoria + ', kadr ' + (i + 1);
+      img.dataset.full = BASE + z.duze;
+      b.appendChild(img); kgrid.appendChild(b);
+      b.addEventListener('click', () => otworz(img));
+    });
+  });
+  if (!kgrid.children.length) document.getElementById('kadry').hidden = true;
+}).catch(() => { document.getElementById('kadry').hidden = true; });
+
+function pokaz(){ const im = lista[idx]; lbImg.src = im.dataset.full; lbImg.alt = im.alt; }
+function otworz(img){ lista = [...kgrid.querySelectorAll('img')]; idx = lista.indexOf(img); wroc = document.activeElement; pokaz(); lb.classList.add('on'); lb.querySelector('.x').focus(); }
+function zamknij(){ lb.classList.remove('on'); lbImg.removeAttribute('src'); if (wroc) wroc.focus(); }
+function krok(d){ idx = (idx + d + lista.length) % lista.length; pokaz(); }
+lb.querySelector('.x').onclick = zamknij;
+lb.querySelector('.prev').onclick = () => krok(-1);
+lb.querySelector('.next').onclick = () => krok(1);
+lb.addEventListener('click', e => { if (e.target === lb) zamknij(); });
+lb.addEventListener('keydown', e => { if (e.key === 'Escape') zamknij(); if (e.key === 'ArrowLeft') krok(-1); if (e.key === 'ArrowRight') krok(1); });
+let x0 = null;
+lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+lb.addEventListener('touchend', e => { if (x0 === null) return; const dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 50) krok(dx < 0 ? 1 : -1); x0 = null; });
+</script>
+</body>
+</html>
