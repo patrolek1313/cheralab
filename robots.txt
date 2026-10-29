@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /zgoda.html
+Disallow: /oferta-uczestniczki.html
+
+Sitemap: https://cheralab.eu/sitemap.xml
