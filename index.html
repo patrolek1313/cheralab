@@ -6,7 +6,7 @@
 <link rel="apple-touch-icon" href="img/favicon-180.png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chera Lab · fotografia, strony i AI dla firm</title>
-<meta name="description" content="Chera Lab - Katarzyna Wójcik: fotografia off-road, wyścigów ultra i wydarzeń (Chera Photography), projektowanie stron internetowych i AI dla małych firm.">
+<meta name="description" content="Chera Lab - Katarzyna Wójcik: fotografia off-road, wyścigów ultra i wydarzeń (Chera Lab Photography), projektowanie stron internetowych i AI dla małych firm.">
 <meta name="theme-color" content="#13201a">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -634,6 +634,24 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .firm .ev-cta{margin-top:clamp(36px,4vw,56px)}
 @media (max-width:1000px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.packs,.svc,.terms,.steps3{grid-template-columns:1fr}.pk-tag{left:16px}}
+
+/* ================= OBSZARY: każdy ma swój odcień zieleni ================= */
+:root{--area1:#182b22;--area2:#1f2d23;--area3:#0f2a22}
+#web,#dla-firm,#foto,#biznes,#eventy{position:relative;padding-bottom:clamp(80px,9vw,130px)}
+#web,#dla-firm{background:var(--area1)}
+#foto{background:var(--area2)}
+#biznes,#eventy{background:var(--area3)}
+#biznes.biz{margin-top:0;background:var(--area3)}
+#web,#foto,#biznes{border-top:1px solid rgba(160,170,139,.16)}
+#dla-firm{padding-top:clamp(40px,5vw,70px)}
+#eventy{padding-top:clamp(20px,3vw,40px)!important}
+#web::before,#foto::before,#biznes::before{position:absolute;top:clamp(30px,4vw,60px);right:var(--pad);font-family:var(--serif);font-size:clamp(6rem,16vw,15rem);line-height:.8;color:rgba(160,170,139,.07);pointer-events:none;z-index:0}
+#web::before{content:'01'}#foto::before{content:'02'}#biznes::before{content:'03'}
+#web>.wrap,#foto>.wrap,#biznes>.wrap{position:relative;z-index:1}
+#kontakt{border-top:1px solid rgba(160,170,139,.16)}
+/* aktywny obszar w menu */
+.nav a.on{color:var(--lime)}
+.nav a:not(.nav-oferta):not(.cta).on{box-shadow:inset 0 -1px 0 var(--lime)}
 </style>
 </head>
 <body>
@@ -723,7 +741,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       </svg>
       <div class="lab-grid">
         <a class="lab-item" data-r="1" href="#web"><span class="node"></span><span class="lab-n">01</span><h3>Strony i AI dla firm</h3><p>Strony, rezerwacje bez telefonu, automatyzacje i asystent AI. Najchętniej dla branży moto - warsztatów, torów i organizatorów eventów.</p><span class="lab-go">Zobacz ↓</span></a>
-        <a class="lab-item" data-r="2" href="#foto"><span class="node"></span><span class="lab-n">02</span><h3>Chera Photography</h3><p>Sesje i reportaże z wydarzeń, uroczystości i rajdów. Naturalnie, z charakterem.</p><span class="lab-go">Zobacz ↓</span></a>
+        <a class="lab-item" data-r="2" href="#foto"><span class="node"></span><span class="lab-n">02</span><h3>Chera Lab Photography</h3><p>Sesje i reportaże z wydarzeń, uroczystości i rajdów. Naturalnie, z charakterem.</p><span class="lab-go">Zobacz ↓</span></a>
         <a class="lab-item" data-r="3" href="#biznes"><span class="node"></span><span class="lab-n">03</span><h3>Projekty i wydarzenia</h3><p>Porządkuję procesy, prowadzę zmiany i organizuję wydarzenia - od konferencji po rajdy. Ponad 10 lat w nauce i biznesie.</p><span class="lab-go">Zobacz ↓</span></a>
       </div>
     </div>
@@ -830,8 +848,8 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <img class="sec-logo" src="img/logo-chera-photography-poziome.png" alt="Chera Photography" width="1571" height="600" loading="lazy">
-        <div class="label"><span class="n">02</span>Chera Photography · Fotografia</div>
+        <img class="sec-logo" src="img/logo-chera-lab-photography.png" alt="Chera Lab Photography" width="1318" height="523" loading="lazy">
+        <div class="label"><span class="n">02</span>Chera Lab Photography · Fotografia</div>
         <h2 class="h2">Nie ustawiam historii. <span class="serif">Łapię moment.</span></h2>
       </div>
       <div>
@@ -974,7 +992,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 
 <footer>
   <span>© <span id="yr"></span> Chera Lab · Katarzyna Wójcik</span>
-  <span>Wszystkie zdjęcia: Chera Photography</span>
+  <span>Wszystkie zdjęcia: Chera Lab Photography</span>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -989,7 +1007,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
     <div class="lb-frame" id="lbFrame"><img id="lbImg" alt=""></div>
     <button class="lb-btn lb-nav lb-next" id="lbNext" aria-label="Następne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 5l7 7-7 7"/></svg></button>
   </div>
-  <div class="lb-bot"><span class="lb-hint">← → przełączaj · Esc zamknij</span><span class="lb-hint">© Chera Photography</span></div>
+  <div class="lb-bot"><span class="lb-hint">← → przełączaj · Esc zamknij</span><span class="lb-hint">© Chera Lab Photography</span></div>
 </div>
 
 <script>
@@ -1388,6 +1406,18 @@ $('#lbStage').addEventListener('pointerup', e => {
     a.addEventListener('mouseenter', on); a.addEventListener('focus', on);
     a.addEventListener('mouseleave', off); a.addEventListener('blur', off);
   });
+})();
+</script>
+<script>
+(() => {
+  const map = { 'chera-lab': '#o-mnie', 'web': '#web', 'dla-firm': '#dla-firm', 'foto': '#foto', 'biznes': '#biznes', 'eventy': '#biznes', 'kontakt': '#kontakt' };
+  const links = [...document.querySelectorAll('#nav a')];
+  const io = new IntersectionObserver(es => es.forEach(e => {
+    if (!e.isIntersecting) return;
+    const h = map[e.target.id];
+    links.forEach(a => a.classList.toggle('on', a.getAttribute('href') === h));
+  }), { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(map).forEach(id => { const s = document.getElementById(id); if (s) io.observe(s); });
 })();
 </script>
 </body>
