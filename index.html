@@ -585,6 +585,19 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .about-form .boxes{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
 .about-form .form-foot{font-size:clamp(1.1rem,1.6vw,1.35rem)}
 .about-txt.in .boxes path{stroke-dashoffset:0}
+
+.nav a{white-space:nowrap}
+/* ================= STRUKTURA v2: O mnie w hero, sekcja 03 z kontynuacją ================= */
+.me{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(20px,3vw,44px);align-items:center;max-width:960px;margin:0 auto clamp(10px,2vw,24px)}
+.me-img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;border-radius:2px;border:1px solid var(--line)}
+.me-txt .label{margin-bottom:12px}
+.me-big{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,1.9rem);line-height:1.2;color:var(--ink);margin-bottom:12px}
+.me-txt p{color:rgba(245,240,232,.86);font-weight:400;max-width:40em}
+@media (max-width:640px){.me{grid-template-columns:110px minmax(0,1fr);align-items:start}.me-big{font-size:1.25rem}}
+.sec-cont{padding-top:clamp(20px,3vw,40px)!important}
+.ev-form{margin-top:clamp(40px,5vw,70px)}
+.ev-form .h2{font-size:clamp(1.8rem,3.4vw,3rem)!important}
+.ev-form.in .boxes path{stroke-dashoffset:0}
 </style>
 </head>
 <body>
@@ -593,11 +606,10 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   <a class="brand" href="#start" aria-label="Chera Lab - początek strony"><img src="img/logo-chera-lab-poziome.png" alt="Chera Lab" width="1571" height="600"></a>
   <nav class="nav" id="nav">
     <a href="ai-dla-firm.html" class="nav-oferta">Dla firm</a>
-    <a href="#foto">Fotografia</a>
-    <a href="#web">Web design</a>
-    <a href="#biznes">Biznes</a>
-    <a href="#eventy">Eventy</a>
     <a href="#o-mnie">O mnie</a>
+    <a href="#web">Strony i AI</a>
+    <a href="#foto">Fotografia</a>
+    <a href="#biznes">Projekty</a>
     <a href="oferta.html"><svg class="ap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.3 3.3 8.5 13.3M20.7 9.6H9.2M18.6 18.1 12.9 8.1M9.7 20.7l5.8-10M3.3 14.4h11.5M5.4 5.9l5.7 10"/></svg>Oferta foto</a>
     <a href="#kontakt" class="cta">Napisz do mnie</a>
   </nav>
@@ -648,6 +660,14 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 <!-- CHERA LAB: trzy obszary połączone korzeniami -->
 <section class="sec lab" id="chera-lab">
   <div class="wrap">
+    <div class="me rv" id="o-mnie">
+      <img class="me-img" src="img/kasia-chera-portret.jpg" alt="Katarzyna Wójcik - Chera Lab" width="400" height="500" loading="lazy">
+      <div class="me-txt">
+        <div class="label">Kim jestem</div>
+        <p class="me-big">Jestem Katarzyna Wójcik - doktor chemii, project manager, pilot rajdowy i fotografka.</p>
+        <p>„Chera” to imię mojego ukochanego konia z dzieciństwa. Od podstawówki wszyscy tak na mnie mówią, więc kiedy szukałam nazwy dla własnej marki, wybór był prosty. W szafie milion sukienek, w garażu namioty i sprzęt wyprawowy - a z tych wszystkich korzeni wyrosła Chera Lab.</p>
+      </div>
+    </div>
     <div class="roots-map" id="rootsMap">
       <svg class="roots-svg" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
         <path class="trunk" pathLength="1" d="M600 0 C600 40 600 70 600 96"/>
@@ -666,9 +686,9 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
         <circle class="seed" cx="600" cy="96" r="5"/>
       </svg>
       <div class="lab-grid">
-        <a class="lab-item" data-r="1" href="ai-dla-firm.html"><span class="node"></span><span class="lab-n">01</span><h3>Strony i AI dla firm</h3><p>Strony, rezerwacje bez telefonu, automatyzacje i asystent AI. Najchętniej dla branży moto - warsztatów, torów i organizatorów eventów.</p><span class="lab-go">Oferta dla firm →</span></a>
-        <a class="lab-item" data-r="2" href="oferta.html"><span class="node"></span><span class="lab-n">02</span><h3>Chera Photography</h3><p>Sesje i reportaże z wydarzeń, uroczystości i rajdów. Naturalnie, z charakterem.</p><span class="lab-go">Oferta foto →</span></a>
-        <a class="lab-item" data-r="3" href="#biznes"><span class="node"></span><span class="lab-n">03</span><h3>Projekty i operacje</h3><p>Zanim coś zautomatyzuję, porządkuję proces. Ponad 10 lat prowadzenia projektów w nauce i biznesie.</p><span class="lab-go">Jak pracuję →</span></a>
+        <a class="lab-item" data-r="1" href="#web"><span class="node"></span><span class="lab-n">01</span><h3>Strony i AI dla firm</h3><p>Strony, rezerwacje bez telefonu, automatyzacje i asystent AI. Najchętniej dla branży moto - warsztatów, torów i organizatorów eventów.</p><span class="lab-go">Zobacz ↓</span></a>
+        <a class="lab-item" data-r="2" href="#foto"><span class="node"></span><span class="lab-n">02</span><h3>Chera Photography</h3><p>Sesje i reportaże z wydarzeń, uroczystości i rajdów. Naturalnie, z charakterem.</p><span class="lab-go">Zobacz ↓</span></a>
+        <a class="lab-item" data-r="3" href="#biznes"><span class="node"></span><span class="lab-n">03</span><h3>Projekty i wydarzenia</h3><p>Porządkuję procesy, prowadzę zmiany i organizuję wydarzenia - od konferencji po rajdy. Ponad 10 lat w nauce i biznesie.</p><span class="lab-go">Zobacz ↓</span></a>
       </div>
     </div>
     <p class="lab-why rv"><b>Dlaczego „Lab”?</b> Jestem doktorem chemii. Laboratorium to dla mnie synonim metody i precyzji: wiem, co chcę osiągnąć, dobieram właściwe narzędzia i mierzę wynik. Tak samo pracuję z technologią.</p>
@@ -676,52 +696,12 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 </section>
 
 
-<!-- FOTOGRAFIA -->
-<section class="sec" id="foto">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div>
-        <img class="sec-logo" src="img/logo-chera-photography.png" alt="Chera Photography" width="679" height="368" loading="lazy">
-        <div class="label"><span class="n">01</span>Fotografia · Chera Photography</div>
-        <h2 class="h2">Nie ustawiam historii. <span class="serif">Łapię moment.</span></h2>
-      </div>
-      <div>
-        <p class="story">Wszystko zaczęło się na rajdach. Kiedy akurat nie startowałam ani nie organizowałam zawodów off-roadowych, nie chciałam stać z boku jako bezczynna obserwatorka. Kupiłam aparat. Tak zaczęła się moja przygoda z fotografią.</p>
-        <p>Fotografuję to, co niezwykłe - najczęściej w błocie, kurzu i adrenalinie. Aparat jedzie ze mną wszędzie: na rajdy off-road, wyścigi ultra, wydarzenia i uroczystości. <strong>Dobra fotografia jest jak dobry makijaż: podkreśla piękno, ale nie zagarnia istoty rzeczy.</strong> <a href="oferta.html">Zobacz ofertę sesji i reportaży</a>.</p>
-        <div class="stats" id="stats">
-          <div><span data-stat="all">-</span><small>kadrów</small></div>
-          <div><span data-stat="cats">-</span><small>kategorie</small></div>
-          <div>0%<small>AI w kadrze</small></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="filters"><div class="filters-in" id="filters" role="toolbar" aria-label="Kategorie zdjęć"></div></div>
-  <div class="grid" id="grid" aria-live="polite"></div>
-  <div class="more" id="more" hidden><button id="moreBtn">Pokaż kolejne <span id="moreN"></span>
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button></div>
-  <div class="more more-link"><a class="btn ghost" href="https://patrolek1313.github.io/galeria/">Zobacz całą galerię</a></div>
-
-  <div class="wrap">
-    <a class="offer-banner rv" href="oferta.html" id="oferta">
-      <div class="ob-txt">
-        <div class="label"><span class="n">01.2</span>Oferta fotograficzna</div>
-        <h3 class="h2 sm">Sesje i reportaże. <span class="serif">Naturalnie, z charakterem.</span></h3>
-        <p>Eventy biznesowe, imprezy okolicznościowe i sesje wizerunkowe. Jasne pakiety, konkretne liczby, prywatna galeria online.</p>
-        <span class="btn primary">Zobacz ofertę</span>
-      </div>
-      <div class="ob-img"><img src="https://patrolek1313.github.io/galeria/konferencje-i-szkolenia/duze/konferencje-i-szkolenia-002.webp" alt="Reportaż z konferencji" loading="lazy"></div>
-    </a>
-  </div>
-</section>
-
 <!-- WEB DESIGN -->
 <section class="sec" id="web">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="label"><span class="n">02</span>Web design · UX / UI</div>
+        <div class="label"><span class="n">01</span>Strony i AI · Web design</div>
         <h2 class="h2">Strony, które <span class="serif">mają charakter.</span></h2>
       </div>
       <p>Zaczynam od człowieka i celu, nie od szablonu. Układam strukturę, projektuję interfejs, dodaję celowy ruch, testuję i rozwijam. Od marek kosmetycznych po firmy usługowe, wydarzenia i fundacje.</p>
@@ -761,7 +741,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 
     <a class="offer-banner rv" href="ai-dla-firm.html" id="dla-firm">
       <div class="ob-txt">
-        <div class="label"><span class="n">02.2</span>AI dla małej firmy</div>
+        <div class="label"><span class="n">01.2</span>AI dla małej firmy</div>
         <h3 class="h2 sm">Strona, automatyzacje i AI. <span class="serif">Zrobione za Ciebie.</span></h3>
         <p>Rezerwacje bez telefonu, asystent AI na stronie, oferty i wyceny z szablonów, szkolenie zespołu. W 2-6 tygodni, w stałej cenie.</p>
         <span class="btn primary">Zobacz ofertę dla firm</span>
@@ -775,12 +755,52 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   </div>
 </section>
 
+<!-- FOTOGRAFIA -->
+<section class="sec" id="foto">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <img class="sec-logo" src="img/logo-chera-photography.png" alt="Chera Photography" width="679" height="368" loading="lazy">
+        <div class="label"><span class="n">02</span>Chera Photography · Fotografia</div>
+        <h2 class="h2">Nie ustawiam historii. <span class="serif">Łapię moment.</span></h2>
+      </div>
+      <div>
+        <p class="story">Wszystko zaczęło się na rajdach. Kiedy akurat nie startowałam ani nie organizowałam zawodów off-roadowych, nie chciałam stać z boku jako bezczynna obserwatorka. Kupiłam aparat. Tak zaczęła się moja przygoda z fotografią.</p>
+        <p>Fotografuję to, co niezwykłe - najczęściej w błocie, kurzu i adrenalinie. Aparat jedzie ze mną wszędzie: na rajdy off-road, wyścigi ultra, wydarzenia i uroczystości. <strong>Dobra fotografia jest jak dobry makijaż: podkreśla piękno, ale nie zagarnia istoty rzeczy.</strong> <a href="oferta.html">Zobacz ofertę sesji i reportaży</a>.</p>
+        <div class="stats" id="stats">
+          <div><span data-stat="all">-</span><small>kadrów</small></div>
+          <div><span data-stat="cats">-</span><small>kategorie</small></div>
+          <div>0%<small>AI w kadrze</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="filters"><div class="filters-in" id="filters" role="toolbar" aria-label="Kategorie zdjęć"></div></div>
+  <div class="grid" id="grid" aria-live="polite"></div>
+  <div class="more" id="more" hidden><button id="moreBtn">Pokaż kolejne <span id="moreN"></span>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12l7 7 7-7"/></svg></button></div>
+  <div class="more more-link"><a class="btn ghost" href="https://patrolek1313.github.io/galeria/">Zobacz całą galerię</a></div>
+
+  <div class="wrap">
+    <a class="offer-banner rv" href="oferta.html" id="oferta">
+      <div class="ob-txt">
+        <div class="label"><span class="n">02.2</span>Oferta fotograficzna</div>
+        <h3 class="h2 sm">Sesje i reportaże. <span class="serif">Naturalnie, z charakterem.</span></h3>
+        <p>Eventy biznesowe, imprezy okolicznościowe i sesje wizerunkowe. Jasne pakiety, konkretne liczby, prywatna galeria online.</p>
+        <span class="btn primary">Zobacz ofertę</span>
+      </div>
+      <div class="ob-img"><img src="https://patrolek1313.github.io/galeria/konferencje-i-szkolenia/duze/konferencje-i-szkolenia-002.webp" alt="Reportaż z konferencji" loading="lazy"></div>
+    </a>
+  </div>
+</section>
+
 <!-- BIZNES I TRANSFORMACJA -->
 <section class="sec biz" id="biznes">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="label"><span class="n">03</span>Business acumen · Transformacja</div>
+        <div class="label"><span class="n">03</span>Projekty i wydarzenia · Biznes</div>
         <h2 class="h2">Zmiana to reakcja. <span class="serif">Znam jej chemię.</span></h2>
       </div>
       <p>Doktorat z chemii nauczył mnie myśleć procesem i sprawdzać hipotezy. MBA i DBA dały mi język biznesu. <strong>Od ponad 10 lat łączę jedno z drugim:</strong> prowadzę projekty, operacje i transformacje, głównie w branży farmaceutycznej, gdzie liczą się jednocześnie precyzja, tempo i ludzie. Projekty prowadziłam w Polsce, Niemczech, Holandii i USA.</p>
@@ -823,11 +843,11 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 </section>
 
 <!-- EVENTY I MOTORSPORT -->
-<section class="sec" id="eventy">
+<section class="sec sec-cont" id="eventy">
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <div class="label"><span class="n">04</span>Eventy · Rajdy · Motorsport</div>
+        <div class="label"><span class="n">03.2</span>Wydarzenia · Rajdy · Motorsport</div>
         <h2 class="h2">Od pomysłu do startu. <span class="serif">I aż do mety.</span></h2>
       </div>
       <p>Organizuję wydarzenia, które mają zaplecze i duszę: od międzynarodowych konferencji naukowych, przez wydarzenia fundacji, po rajdy i imprezy motorsportowe. Motorsport znam od środka - jako pilot rajdowy, fotografka i organizatorka. <strong>To kierunek, w którym chcę rozwijać nowe projekty.</strong></p>
@@ -852,23 +872,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       <p>Planujesz rajd, event firmowy albo wydarzenie <em>z charakterem?</em></p>
       <a class="btn primary" href="#kontakt">Porozmawiajmy</a>
     </div>
-  </div>
-</section>
-
-<!-- O MNIE -->
-<section class="sec" id="o-mnie">
-  <div class="wrap about">
-    <figure class="portrait rv">
-      <img src="img/kasia-chera-portret.jpg" alt="Katarzyna Wójcik - Chera Lab, portret" loading="lazy">
-    </figure>
-    <div class="about-txt rv">
-      <div class="label"><span class="n">05</span>O mnie</div>
-      <p class="big">Jestem Katarzyna Wójcik, a Chera Lab to miejsce, w którym łączę wszystko, co robię.</p>
-      <p>Doktor chemii, project manager, pilot rajdowy, fotografka i projektant stron internetowych. Przez lata prowadziłam projekty w farmacji i badaniach - od laboratorium po operacje całej firmy. Nauczyło mnie to pracy metodą: jasny cel, plan i mierzalny wynik. Nie mam jednej zawodowej ścieżki i właśnie dlatego potrafię patrzeć na problem z kilku stron jednocześnie.</p>
-      <p>„Chera” to imię mojego ukochanego konia z dzieciństwa. Od podstawówki wszyscy tak na mnie mówią, więc kiedy szukałam nazwy dla własnej marki, wybór był prosty. A „Lab”? Bo laboratorium to moje naturalne środowisko - miejsce, w którym rzeczy powstają według metody, a nie na wyczucie.</p>
-      <p>Offroad i photobłoto przyszły chwilę później, całkiem naturalnie. W szafie milion sukienek, w garażu - namioty i sprzęt wyprawowy. Aparat jedzie ze mną wszędzie - w błoto, na wyścigi, na wesela i wydarzenia.</p>
-      <p>W czasach, gdy niemal wszystko można wygenerować sztuczną inteligencją, robię dwie rzeczy naraz: pomagam firmom mądrze korzystać z AI i zachowuję w kadrze tę odrobinę duszy, której żaden algorytm nie podrobi.</p>
-      <div class="form about-form">
+    <div class="form ev-form rv">
       <div class="form-head"><span>Formularz nr 1 · rubryka „zawód”</span><span>zaznacz właściwe</span></div>
       <h2 class="h2">Nie mieszczę się w jednej rubryce. <span class="serif">I dobrze.</span></h2>
       <ul class="boxes">
@@ -881,14 +885,13 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       </ul>
       <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
     </div>
-    </div>
   </div>
 </section>
 
 <!-- KONTAKT -->
 <section class="contact" id="kontakt">
   <div class="wrap rv">
-    <div class="label"><span class="n">06</span>Współpraca · Kontakt</div>
+    <div class="label"><span class="n">04</span>Współpraca · Kontakt</div>
     <h2 class="h2">Masz pomysł? <br><span class="serif">Pojedźmy z tym.</span></h2>
     <a class="mail" href="mailto:katarzynawojcik1@gmail.com">katarzynawojcik1@gmail.com</a>
     <div class="socials">
