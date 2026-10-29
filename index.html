@@ -652,6 +652,23 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 /* aktywny obszar w menu */
 .nav a.on{color:var(--lime)}
 .nav a:not(.nav-oferta):not(.cta).on{box-shadow:inset 0 -1px 0 var(--lime)}
+
+.me-form{margin:0 0 clamp(50px,6vw,90px)}
+.me-form .h2{font-size:clamp(1.8rem,3.4vw,3rem)!important}
+.me-form.in .boxes path{stroke-dashoffset:0}
+/* ================= HERO v4: zdjęcie połączone ze znakiem ================= */
+.anchor{position:absolute;top:0}
+.hero .hero-mark{display:none!important}
+.hero-visual{position:absolute;z-index:0;top:72px;bottom:0;right:var(--pad);width:min(46%,720px);margin:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}
+.hv-img{display:block;height:88%;width:auto;max-width:100%;object-fit:contain;object-position:bottom}
+.hero-visual figcaption{position:absolute;bottom:clamp(40px,6vw,90px);left:0;right:auto;text-align:left!important;font-family:var(--serif);font-style:italic;font-size:clamp(.98rem,1.15vw,1.12rem);color:var(--muted);text-align:right;max-width:11.5em;line-height:1.35}
+.hero-visual figcaption em{color:var(--lime);display:block}
+.hero-lead strong{color:var(--ink);font-weight:600}
+@media (max-width:980px){
+  .hero-visual{position:relative;inset:auto;width:auto;height:auto;margin:84px var(--pad) 0}
+  .hv-img{height:auto;width:min(86vw,420px)}
+  .hero-visual figcaption{position:static;text-align:center;max-width:none;margin-top:12px}
+}
 </style>
 </head>
 <body>
@@ -688,14 +705,17 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 </section>
 
 <!-- HERO -->
-<section class="hero" id="start">
+<section class="hero" id="start"><span id="o-mnie" class="anchor"></span>
   <div class="slides" id="slides" aria-hidden="true"></div>
-  <figure class="hero-mark" aria-hidden="true"><img src="img/znak-chera.png" alt="" width="503" height="595"></figure>
+  <figure class="hero-visual">
+    <img class="hv-img" src="img/hero-kasia-chera.png" alt="Katarzyna Wójcik i znak Chera Lab - koń z korzeniami" width="1165" height="975">
+    <figcaption>„Chera” to imię mojego ukochanego konia z dzieciństwa. <em>Od podstawówki wszyscy tak na mnie mówią.</em></figcaption>
+  </figure>
   <div class="hero-in">
     <div>
       <div class="label hero-eyebrow">Chera Lab · Katarzyna Wójcik</div>
       <h1><span>Technologia, obraz i ludzie.</span><span class="l">Z jednych korzeni.</span></h1>
-      <p class="hero-lead">Chera Lab to moja pracownia. Projektuję strony i wdrażam AI w małych firmach, fotografuję wydarzenia i prowadzę projekty od pomysłu do efektu. W mojej głowie nie ma szufladek, są połączenia - jak w systemie korzeni drzew.</p>
+      <p class="hero-lead"><strong>Jestem Katarzyna Wójcik</strong> - doktor chemii, project manager, pilot rajdowy i fotografka. Chera Lab to moja pracownia. Projektuję strony i wdrażam AI w małych firmach, fotografuję wydarzenia i prowadzę projekty od pomysłu do efektu. W mojej głowie nie ma szufladek, są połączenia - jak w systemie korzeni drzew.</p>
       <p class="hero-motto">Głowa na szpilkach, <em>serce w lesie.</em></p>
       <div class="btns">
         <a class="btn primary" href="#dla-firm">Oferta dla firm</a>
@@ -714,13 +734,18 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 <!-- CHERA LAB: trzy obszary połączone korzeniami -->
 <section class="sec lab" id="chera-lab">
   <div class="wrap">
-    <div class="me rv" id="o-mnie">
-      <img class="me-img" src="img/kasia-chera-portret.jpg" alt="Katarzyna Wójcik - Chera Lab" width="400" height="500" loading="lazy">
-      <div class="me-txt">
-        <div class="label">Kim jestem</div>
-        <p class="me-big">Jestem Katarzyna Wójcik - doktor chemii, project manager, pilot rajdowy i fotografka.</p>
-        <p>„Chera” to imię mojego ukochanego konia z dzieciństwa. Od podstawówki wszyscy tak na mnie mówią, więc kiedy szukałam nazwy dla własnej marki, wybór był prosty. W szafie milion sukienek, w garażu namioty i sprzęt wyprawowy - a z tych wszystkich korzeni wyrosła Chera Lab.</p>
-      </div>
+    <div class="form me-form rv">
+      <div class="form-head"><span>Formularz nr 1 · rubryka „zawód”</span><span>zaznacz właściwe</span></div>
+      <h2 class="h2">Nie mieszczę się w jednej rubryce. <span class="serif">I dobrze.</span></h2>
+      <ul class="boxes">
+        <li><a href="#foto"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Fotografka</a></li>
+        <li><a href="#web"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Web designer</a></li>
+        <li><a href="#biznes"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Project manager</a></li>
+        <li><a href="#eventy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Organizatorka eventów i rajdów</a></li>
+        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Założycielka fundacji</a></li>
+        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni marki TIYATI</a></li>
+      </ul>
+      <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
     </div>
     <div class="roots-map" id="rootsMap">
       <svg class="roots-svg" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
@@ -755,6 +780,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   <div class="wrap">
     <div class="sec-head rv">
       <div>
+        <img class="sec-logo" src="img/logo-chera-lab-webdesign.png" alt="Chera Lab Web Design" width="1318" height="523" loading="lazy">
         <div class="label"><span class="n">01</span>Strony i AI · Web design</div>
         <h2 class="h2">Strony, które <span class="serif">mają charakter.</span></h2>
       </div>
@@ -960,19 +986,6 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       <p>Planujesz rajd, event firmowy albo wydarzenie <em>z charakterem?</em></p>
       <a class="btn primary" href="#kontakt">Porozmawiajmy</a>
     </div>
-    <div class="form ev-form rv">
-      <div class="form-head"><span>Formularz nr 1 · rubryka „zawód”</span><span>zaznacz właściwe</span></div>
-      <h2 class="h2">Nie mieszczę się w jednej rubryce. <span class="serif">I dobrze.</span></h2>
-      <ul class="boxes">
-        <li><a href="#foto"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Fotografka</a></li>
-        <li><a href="#web"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Web designer</a></li>
-        <li><a href="#biznes"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Project manager</a></li>
-        <li><a href="#eventy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Organizatorka eventów i rajdów</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Założycielka fundacji</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni marki TIYATI</a></li>
-      </ul>
-      <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
-    </div>
   </div>
 </section>
 
@@ -1049,6 +1062,9 @@ const CONFIG = {
       desc: 'Makijażystka z Londynu: strona i branding, w których portfolio gra pierwsze skrzypce.',
       img: 'https://chera13kasia.lovable.app/__l5e/assets-v1/0b532a91-358e-48ed-aa8d-ef104a9f500e/dorotamakeup-website.jpg',
       tall: 'https://kasiachera1.lovable.app/__l5e/assets-v1/13945a6c-9b8c-4287-a6e8-4cd0666833f2/dorotamakeup-preview.jpg' },
+    { name: 'Rozkwit Talentów', url: 'https://rozkwittalentow.pl/', type: 'Web design · Coaching',
+      desc: 'Strona Katarzyny Sobczak, coacha: ciepła, spokojna i prowadząca prosto do pierwszej rozmowy.',
+      img: 'img/portfolio-rozkwit.jpg' },
     { name: 'MotoMind & Heart', url: 'https://fundacjammh.lovable.app/', type: 'Web · Social impact',
       desc: 'Strona fundacji na rzecz bezpieczeństwa - od edukacji kierowców po kampanie społeczne.',
       img: 'https://chera13kasia.lovable.app/__l5e/assets-v1/b08e71f2-e169-4630-b5d4-8ab01c7b9a53/portfolio-motomind.jpg' },
