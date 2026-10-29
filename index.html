@@ -599,6 +599,41 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .ev-form{margin-top:clamp(40px,5vw,70px)}
 .ev-form .h2{font-size:clamp(1.8rem,3.4vw,3rem)!important}
 .ev-form.in .boxes path{stroke-dashoffset:0}
+
+/* ================= 01.2 AUTOMATYZACJE I AI DLA FIRM ================= */
+.firm{padding-top:clamp(30px,4vw,60px)}
+.svc{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:clamp(26px,3vw,40px)}
+.svc article{background:var(--bg);padding:clamp(20px,2.4vw,30px);transition:background .3s}
+.svc article:hover{background:var(--bg-2)}
+.svc b{font-size:.74rem;letter-spacing:.2em;color:var(--lime);font-weight:600}
+.svc h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.15;margin:10px 0 8px}
+.svc p{color:rgba(245,240,232,.82);font-weight:400}
+.svc-note{margin-top:22px;color:rgba(245,240,232,.86);max-width:52em}
+.svc-note em{font-family:var(--serif);font-size:1.2em;color:var(--lime)}
+.firm-sub{margin-top:clamp(50px,6vw,80px);margin-bottom:22px}
+.packs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.pk{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);padding:clamp(20px,2.2vw,28px);background:linear-gradient(180deg,rgba(160,170,139,.05),rgba(160,170,139,0) 60%);transition:border-color .3s,transform .3s}
+.pk:hover{border-color:rgba(160,170,139,.6);transform:translateY(-4px)}
+.pk.star{border-color:var(--lime);background:linear-gradient(180deg,rgba(160,170,139,.14),rgba(160,170,139,0) 70%)}
+.pk h4{font-family:var(--serif);font-weight:500;font-size:1.6rem}
+.pk-tag{position:absolute;top:-11px;left:20px;background:var(--lime);color:var(--bg);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;padding:4px 10px}
+.pk-tag2{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.pk-price{font-family:var(--serif);font-size:clamp(1.9rem,2.6vw,2.4rem);color:var(--lime);margin-top:8px;line-height:1.1}
+.pk-price small{font-size:.5em;color:var(--muted)}
+.pk-time{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.pk ul{list-style:none;flex:1;margin-bottom:20px}
+.pk li{padding:8px 0;border-top:1px solid var(--line);color:rgba(245,240,232,.86);font-weight:400;font-size:.95rem}
+.pk .btn{justify-content:center}
+.terms{list-style:none;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 30px;margin-top:26px;color:rgba(245,240,232,.8);font-weight:400;font-size:.95rem}
+.terms b{color:var(--ink);font-weight:600;margin-right:4px}
+.steps3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(14px,2vw,26px);margin-top:clamp(50px,6vw,80px)}
+.steps3 div{border-top:2px solid var(--lime);padding-top:16px}
+.steps3 span{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lime)}
+.steps3 h4{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:6px 0}
+.steps3 p{color:rgba(245,240,232,.82);font-weight:400}
+.firm .ev-cta{margin-top:clamp(36px,4vw,56px)}
+@media (max-width:1000px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.packs,.svc,.terms,.steps3{grid-template-columns:1fr}.pk-tag{left:16px}}
 </style>
 </head>
 <body>
@@ -606,7 +641,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 <header class="top" id="top">
   <a class="brand" href="#start" aria-label="Chera Lab - początek strony"><img src="img/logo-chera-lab-poziome.png" alt="Chera Lab" width="1571" height="600"></a>
   <nav class="nav" id="nav">
-    <a href="ai-dla-firm.html" class="nav-oferta">Dla firm</a>
+    <a href="#dla-firm" class="nav-oferta">Dla firm</a>
     <a href="#o-mnie">O mnie</a>
     <a href="#web">Strony i AI</a>
     <a href="#foto">Fotografia</a>
@@ -645,7 +680,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       <p class="hero-lead">Chera Lab to moja pracownia. Projektuję strony i wdrażam AI w małych firmach, fotografuję wydarzenia i prowadzę projekty od pomysłu do efektu. W mojej głowie nie ma szufladek, są połączenia - jak w systemie korzeni drzew.</p>
       <p class="hero-motto">Głowa na szpilkach, <em>serce w lesie.</em></p>
       <div class="btns">
-        <a class="btn primary" href="ai-dla-firm.html">Oferta dla firm</a>
+        <a class="btn primary" href="#dla-firm">Oferta dla firm</a>
         <a class="btn ghost" href="oferta.html">Oferta foto</a>
       </div>
     </div>
@@ -740,19 +775,53 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       </ol>
     </div>
 
-    <a class="offer-banner rv" href="ai-dla-firm.html" id="dla-firm">
-      <div class="ob-txt">
-        <div class="label"><span class="n">01.2</span>AI dla małej firmy</div>
-        <h3 class="h2 sm">Strona, automatyzacje i AI. <span class="serif">Zrobione za Ciebie.</span></h3>
-        <p>Rezerwacje bez telefonu, asystent AI na stronie, oferty i wyceny z szablonów, szkolenie zespołu. W 2-6 tygodni, w stałej cenie.</p>
-        <span class="btn primary">Zobacz ofertę dla firm</span>
+  </div>
+</section>
+
+<!-- 01.2 AUTOMATYZACJE I AI DLA FIRM -->
+<section class="sec firm" id="dla-firm">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="label"><span class="n">01.2</span>Automatyzacje i AI dla firm</div>
+        <h2 class="h2">Mniej telefonów i papierów. <span class="serif">Więcej klientów.</span></h2>
       </div>
-      <div class="ob-img ob-facts">
-        <div><b>od 2 400 zł</b><span>strona-wizytówka w 2-3 tygodnie</span></div>
-        <div><b>5 900 zł</b><span>strona, automatyzacja i szkolenie</span></div>
-        <div><b>390 zł / mies.</b><span>opieka i rozwój</span></div>
-      </div>
-    </a>
+      <p>Nie sprzedaję doradztwa ani kursu. Buduję i wdrażam rzeczy, które oszczędzają Ci czas albo przynoszą klientów, a potem pokazuję Twojemu zespołowi, jak z nich korzystać. Pracuję z małymi firmami: warsztatami, serwisami, torami off-road, usługodawcami i lokalnymi markami.</p>
+    </div>
+
+    <div class="svc rv">
+      <article><b>01</b><h3>Strona, która zbiera zapytania</h3><p>Nowoczesna, szybka, działa na telefonie, z formularzem i wizytówką w Mapach Google.</p></article>
+      <article><b>02</b><h3>Rezerwacje bez telefonu</h3><p>Klient sam umawia termin, a system wysyła mu przypomnienie dzień wcześniej.</p></article>
+      <article><b>03</b><h3>Asystent AI na stronie</h3><p>Odpowiada na typowe pytania o ceny, godziny i terminy, także w nocy i w weekend.</p></article>
+      <article><b>04</b><h3>Mniej papierologii</h3><p>Oferty, wyceny i odpowiedzi na maile z gotowych szablonów, w kilka minut zamiast godziny.</p></article>
+      <article><b>05</b><h3>Treści do social mediów</h3><p>Posty na Facebooka i Instagrama przygotowywane z AI. Ty tylko akceptujesz.</p></article>
+      <article><b>06</b><h3>Szkolenie zespołu</h3><p>2 godziny praktyki na Waszych zadaniach: jak używać AI na co dzień i czego mu nie powierzać.</p></article>
+    </div>
+    <p class="svc-note rv">Zanim zacznę, mówię wprost, co się w Twojej firmie opłaci, a co nie. <em>Jeśli czegoś nie potrzebujesz, nie sprzedam Ci tego.</em></p>
+
+    <div class="label firm-sub rv">Cennik · stała cena, bez dopisków na końcu</div>
+    <div class="packs rv">
+      <article class="pk"><h4>Start</h4><p class="pk-price">2 400 zł</p><p class="pk-time">2-3 tygodnie</p><ul><li>Strona-wizytówka (1 strona)</li><li>Formularz kontaktowy</li><li>Profil w Mapach Google</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Start">Wybieram Start</a></article>
+      <article class="pk star"><p class="pk-tag">Najczęściej wybierany</p><h4>Firma</h4><p class="pk-price">5 900 zł</p><p class="pk-time">5-6 tygodni</p><ul><li>Strona do 5 podstron</li><li>1 automatyzacja: rezerwacje, asystent AI lub szablony ofert</li><li>2 h szkolenia zespołu</li></ul><a class="btn primary" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Firma">Wybieram Firmę</a></article>
+      <article class="pk"><h4>AI w firmie</h4><p class="pk-tag2">bez strony</p><p class="pk-price">3 900 zł</p><p class="pk-time">3-4 tygodnie</p><ul><li>Rozmowa o tym, co zjada Wam czas</li><li>2 automatyzacje</li><li>2 h szkolenia zespołu</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20AI%20w%20firmie">Wybieram AI w firmie</a></article>
+      <article class="pk"><h4>Opieka</h4><p class="pk-tag2">abonament</p><p class="pk-price">390 zł <small>/ mies.</small></p><p class="pk-time">co miesiąc</p><ul><li>Poprawki i nowe treści do 2 h w miesiącu</li><li>Aktualizacje</li><li>Wsparcie przy AI</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20Opieka">Zapytaj o opiekę</a></article>
+    </div>
+    <ul class="terms rv">
+      <li><b>Dla pierwszych 3 firm</b> 20% rabatu w zamian za krótką opinię i zgodę na pokazanie projektu w portfolio.</li>
+      <li><b>Płatność</b> 50% przed startem, 50% po odbiorze.</li>
+      <li><b>Wszystko jest Twoje</b> - strona, domena i narzędzia. Płatne usługi opłacasz u dostawcy, bez mojej marży.</li>
+      <li><b>Maksymalnie 2 nowe projekty</b> w miesiącu, żeby każdy dostał pełną uwagę.</li>
+    </ul>
+
+    <div class="steps3 rv">
+      <div><span>Krok 1</span><h4>Rozmowa</h4><p>Napisz do mnie. Umówimy 30 minut rozmowy, bezpłatnie.</p></div>
+      <div><span>Krok 2</span><h4>Propozycja</h4><p>W ciągu 2 dni dostajesz konkretną propozycję z ceną i terminem.</p></div>
+      <div><span>Krok 3</span><h4>Start</h4><p>Zaczynamy po Twojej akceptacji.</p></div>
+    </div>
+    <div class="ev-cta rv">
+      <p>Co w Twojej firmie <em>zjada najwięcej czasu?</em> Napisz w dwóch zdaniach - odpowiem w ciągu 24 godzin.</p>
+      <a class="btn primary" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy">Umów bezpłatną rozmowę</a>
+    </div>
   </div>
 </section>
 
@@ -761,7 +830,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   <div class="wrap">
     <div class="sec-head rv">
       <div>
-        <img class="sec-logo" src="img/logo-chera-photography.png" alt="Chera Photography" width="679" height="368" loading="lazy">
+        <img class="sec-logo" src="img/logo-chera-photography-poziome.png" alt="Chera Photography" width="1571" height="600" loading="lazy">
         <div class="label"><span class="n">02</span>Chera Photography · Fotografia</div>
         <h2 class="h2">Nie ustawiam historii. <span class="serif">Łapię moment.</span></h2>
       </div>
