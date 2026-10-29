@@ -542,6 +542,49 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 }
 @media (max-width:560px){.hero-mark{height:30svh;margin-top:88px}}
 @media (max-width:980px){.hero-in{padding-top:24px!important}}
+
+/* ================= MAPA KORZENI (01 02 03) ================= */
+.lab{padding-top:clamp(30px,4vw,60px)}
+.roots-map{position:relative;padding-top:clamp(120px,14vw,200px)}
+.roots-svg{position:absolute;left:0;right:0;top:0;width:100%;height:clamp(120px,14vw,200px);overflow:visible}
+.roots-svg path{fill:none;stroke:var(--lime);stroke-linecap:round;transition:stroke .4s,stroke-width .4s,opacity .4s}
+.roots-svg .trunk,.roots-svg .root{stroke-width:2.2;opacity:.75}
+.roots-svg .fine{stroke-width:1.2;opacity:.45}
+.roots-svg .link{stroke-width:1.2;stroke-dasharray:2 7;opacity:.28}
+.roots-svg .seed{fill:var(--lime);opacity:.9}
+.roots-svg .trunk,.roots-svg .root,.roots-svg .fine{stroke-dasharray:1;stroke-dashoffset:1}
+.roots-map.grown .trunk{stroke-dashoffset:0;transition:stroke-dashoffset .9s ease}
+.roots-map.grown .root{stroke-dashoffset:0;transition:stroke-dashoffset 1.6s ease .6s,stroke .4s,stroke-width .4s,opacity .4s}
+.roots-map.grown .fine{stroke-dashoffset:0;transition:stroke-dashoffset 1.2s ease 1.6s,stroke .4s,opacity .4s}
+.roots-map .link{opacity:0;transition:opacity 1s ease 2.4s}
+.roots-map.grown .link{opacity:.28}
+.roots-map[data-on] .root,.roots-map[data-on] .fine{opacity:.18}
+.roots-map[data-on="1"] .r1,.roots-map[data-on="2"] .r2,.roots-map[data-on="3"] .r3{opacity:1;stroke:#c9d1b4}
+.roots-map[data-on="1"] .root.r1,.roots-map[data-on="2"] .root.r2,.roots-map[data-on="3"] .root.r3{stroke-width:3.2}
+.roots-map[data-on] .link{opacity:.18;transition:opacity .4s}
+.roots-map[data-on="1"] .l12,.roots-map[data-on="1"] .l13,.roots-map[data-on="2"] .l12,.roots-map[data-on="2"] .l23,.roots-map[data-on="3"] .l13,.roots-map[data-on="3"] .l23{opacity:.85;stroke:#c9d1b4}
+.roots-map .lab-grid{background:transparent;border:0;gap:clamp(14px,2vw,28px)}
+.roots-map .lab-item{position:relative;border:1px solid var(--line);background:linear-gradient(180deg,rgba(160,170,139,.06),rgba(160,170,139,0) 60%);transition:border-color .35s,transform .35s,background .35s}
+.roots-map .lab-item:hover,.roots-map .lab-item:focus-visible{border-color:rgba(160,170,139,.7);transform:translateY(-6px);background:linear-gradient(180deg,rgba(160,170,139,.14),rgba(160,170,139,0) 70%)}
+.lab-item .node{position:absolute;top:-6px;left:50%;width:11px;height:11px;margin-left:-5.5px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 rgba(160,170,139,.5)}
+.lab-item:hover .node{animation:nodePulse 1.4s ease-out infinite}
+@keyframes nodePulse{0%{box-shadow:0 0 0 0 rgba(160,170,139,.55)}100%{box-shadow:0 0 0 14px rgba(160,170,139,0)}}
+.lab-item .lab-go{transition:letter-spacing .35s}
+.lab-item:hover .lab-go{letter-spacing:.28em}
+@media (max-width:820px){
+  .roots-map{padding-top:0;padding-left:34px}
+  .roots-svg{display:none}
+  .roots-map::before{content:'';position:absolute;left:10px;top:-24px;bottom:30px;width:2px;background:linear-gradient(var(--lime),rgba(160,170,139,.2));opacity:.7}
+  .lab-item .node{top:30px;left:-30px;margin:0}
+  .lab-item::before{content:'';position:absolute;left:-19px;top:35px;width:19px;height:1.5px;background:var(--lime);opacity:.6}
+}
+@media (prefers-reduced-motion:reduce){.roots-svg path{stroke-dashoffset:0!important;transition:none!important}.roots-map .link{opacity:.28}}
+/* O mnie + rubryka */
+.about-form{margin-top:34px;padding:clamp(18px,2.6vw,32px)}
+.about-form .h2{font-size:clamp(1.6rem,2.6vw,2.3rem)!important;margin:18px 0 18px}
+.about-form .boxes{grid-template-columns:repeat(auto-fill,minmax(220px,1fr))}
+.about-form .form-foot{font-size:clamp(1.1rem,1.6vw,1.35rem)}
+.about-txt.in .boxes path{stroke-dashoffset:0}
 </style>
 </head>
 <body>
@@ -588,11 +631,6 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       <h1><span>Technologia, obraz i ludzie.</span><span class="l">Z jednych korzeni.</span></h1>
       <p class="hero-lead">Chera Lab to moja pracownia. Projektuję strony i wdrażam AI w małych firmach, fotografuję wydarzenia i prowadzę projekty od pomysłu do efektu. W mojej głowie nie ma szufladek, są połączenia - jak w systemie korzeni drzew.</p>
       <p class="hero-motto">Głowa na szpilkach, <em>serce w lesie.</em></p>
-      <ul class="lead-list">
-        <li><a href="ai-dla-firm.html"><span class="ll-k">Strony i AI</span><span class="ll-t">Strony, rezerwacje online i automatyzacje, które oszczędzają czas.</span></a></li>
-        <li><a href="oferta.html"><span class="ll-k">Fotografia</span><span class="ll-t">Reportaże z wydarzeń, uroczystości i off-roadu.</span></a></li>
-        <li><a href="#biznes"><span class="ll-k">Projekty</span><span class="ll-t">Prowadzę zmiany, które naprawdę się dzieją.</span></a></li>
-      </ul>
       <div class="btns">
         <a class="btn primary" href="ai-dla-firm.html">Oferta dla firm</a>
         <a class="btn ghost" href="oferta.html">Oferta foto</a>
@@ -607,41 +645,36 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 
 <div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div>
 
-<!-- CHERA LAB: czym jest marka -->
+<!-- CHERA LAB: trzy obszary połączone korzeniami -->
 <section class="sec lab" id="chera-lab">
   <div class="wrap">
-    <div class="lab-head rv">
-      <div class="label">Czym jest Chera Lab</div>
-      <h2 class="h2">Technologia dla Twojej firmy, <span class="serif">z laboratoryjną precyzją.</span></h2>
-      <p class="lab-lead">Chera Lab to moja pracownia na styku technologii, estetyki i ludzi. Projektuję i wdrażam strony, automatyzacje i rozwiązania AI dla małych firm - metodą, której nauczyło mnie laboratorium: jasny cel, dobrze dobrane narzędzia, mierzalny efekt. Obok działa Chera Photography - kadry z wydarzeń, uroczystości i off-roadu.</p>
-    </div>
-    <div class="lab-grid rv">
-      <a class="lab-item" href="ai-dla-firm.html"><span class="lab-n">01</span><h3>AI i strony dla firm</h3><p>Rezerwacje bez telefonu, automatyzacje, asystent AI na stronie. Najchętniej dla branży moto - warsztatów, torów i organizatorów eventów.</p><span class="lab-go">Oferta dla firm →</span></a>
-      <a class="lab-item" href="oferta.html"><span class="lab-n">02</span><h3>Chera Photography</h3><p>Reportaże z wydarzeń biznesowych, uroczystości i rajdów. Bez sztywnego pozowania, z uważnością na ludzi.</p><span class="lab-go">Oferta foto →</span></a>
-      <a class="lab-item" href="#biznes"><span class="lab-n">03</span><h3>Projekty i operacje</h3><p>Zanim coś zautomatyzuję, porządkuję proces. Ponad 10 lat prowadzenia projektów w nauce i biznesie.</p><span class="lab-go">Jak pracuję →</span></a>
+    <div class="roots-map" id="rootsMap">
+      <svg class="roots-svg" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+        <path class="trunk" pathLength="1" d="M600 0 C600 40 600 70 600 96"/>
+        <path class="root r1" pathLength="1" d="M600 96 C560 128 420 132 300 150 C240 160 205 190 200 236"/>
+        <path class="root r2" pathLength="1" d="M600 96 C598 140 604 190 600 236"/>
+        <path class="root r3" pathLength="1" d="M600 96 C640 128 780 132 900 150 C960 160 995 190 1000 236"/>
+        <path class="fine r1" pathLength="1" d="M410 136 C380 150 360 170 352 196"/>
+        <path class="fine r1" pathLength="1" d="M250 166 C232 176 214 180 190 182"/>
+        <path class="fine r2" pathLength="1" d="M601 170 C620 186 634 200 640 220"/>
+        <path class="fine r2" pathLength="1" d="M600 150 C582 166 570 186 566 206"/>
+        <path class="fine r3" pathLength="1" d="M790 136 C820 150 840 170 848 196"/>
+        <path class="fine r3" pathLength="1" d="M950 166 C968 176 986 180 1010 182"/>
+        <path class="link l12" d="M352 196 C430 214 500 214 566 206"/>
+        <path class="link l23" d="M640 220 C720 214 780 210 848 196"/>
+        <path class="link l13" d="M190 182 C420 236 780 236 1010 182"/>
+        <circle class="seed" cx="600" cy="96" r="5"/>
+      </svg>
+      <div class="lab-grid">
+        <a class="lab-item" data-r="1" href="ai-dla-firm.html"><span class="node"></span><span class="lab-n">01</span><h3>Strony i AI dla firm</h3><p>Strony, rezerwacje bez telefonu, automatyzacje i asystent AI. Najchętniej dla branży moto - warsztatów, torów i organizatorów eventów.</p><span class="lab-go">Oferta dla firm →</span></a>
+        <a class="lab-item" data-r="2" href="oferta.html"><span class="node"></span><span class="lab-n">02</span><h3>Chera Photography</h3><p>Sesje i reportaże z wydarzeń, uroczystości i rajdów. Naturalnie, z charakterem.</p><span class="lab-go">Oferta foto →</span></a>
+        <a class="lab-item" data-r="3" href="#biznes"><span class="node"></span><span class="lab-n">03</span><h3>Projekty i operacje</h3><p>Zanim coś zautomatyzuję, porządkuję proces. Ponad 10 lat prowadzenia projektów w nauce i biznesie.</p><span class="lab-go">Jak pracuję →</span></a>
+      </div>
     </div>
     <p class="lab-why rv"><b>Dlaczego „Lab”?</b> Jestem doktorem chemii. Laboratorium to dla mnie synonim metody i precyzji: wiem, co chcę osiągnąć, dobieram właściwe narzędzia i mierzę wynik. Tak samo pracuję z technologią.</p>
   </div>
 </section>
 
-<!-- CAŁA JA: rubryka, w której zaznaczone jest wszystko -->
-<section class="rubryka" id="cala-ja">
-  <div class="wrap">
-    <div class="form rv">
-      <div class="form-head"><span>Formularz nr 1 · rubryka „zawód”</span><span>zaznacz właściwe</span></div>
-      <h2 class="h2">Nie mieszczę się w jednej rubryce. <span class="serif">I dobrze.</span></h2>
-      <ul class="boxes">
-        <li><a href="#foto"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Fotografka</a></li>
-        <li><a href="#web"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Web designer</a></li>
-        <li><a href="#biznes"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Project manager</a></li>
-        <li><a href="#eventy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Organizatorka eventów i rajdów</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Założycielka fundacji</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni TIYATI</a></li>
-      </ul>
-      <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
-    </div>
-  </div>
-</section>
 
 <!-- FOTOGRAFIA -->
 <section class="sec" id="foto">
@@ -835,12 +868,19 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       <p>„Chera” to imię mojego ukochanego konia z dzieciństwa. Od podstawówki wszyscy tak na mnie mówią, więc kiedy szukałam nazwy dla własnej marki, wybór był prosty. A „Lab”? Bo laboratorium to moje naturalne środowisko - miejsce, w którym rzeczy powstają według metody, a nie na wyczucie.</p>
       <p>Offroad i photobłoto przyszły chwilę później, całkiem naturalnie. W szafie milion sukienek, w garażu - namioty i sprzęt wyprawowy. Aparat jedzie ze mną wszędzie - w błoto, na wyścigi, na wesela i wydarzenia.</p>
       <p>W czasach, gdy niemal wszystko można wygenerować sztuczną inteligencją, robię dwie rzeczy naraz: pomagam firmom mądrze korzystać z AI i zachowuję w kadrze tę odrobinę duszy, której żaden algorytm nie podrobi.</p>
-      <div class="quad">
-        <div><b>01</b><h4>Operations</h4><p>Porządkuję złożone rzeczy, łączę ludzi i procesy, i pilnuję, żeby plan zamienił się w działanie.</p></div>
-        <div><b>02</b><h4>Transformation</h4><p>Pomagam zmieniać sposób działania, kiedy dotychczasowe rozwiązania przestają wystarczać.</p></div>
-        <div><b>03</b><h4>People &amp; Experience</h4><p>Pracuję z ludźmi i wokół ludzi. Buduję doświadczenia, które mają sens dla uczestników i organizacji.</p></div>
-        <div><b>04</b><h4>Motorsport</h4><p>Środowisko, w którym organizacja, decyzje, presja czasu i odpowiedzialność spotykają się w jednym miejscu.</p></div>
-      </div>
+      <div class="form about-form">
+      <div class="form-head"><span>Formularz nr 1 · rubryka „zawód”</span><span>zaznacz właściwe</span></div>
+      <h2 class="h2">Nie mieszczę się w jednej rubryce. <span class="serif">I dobrze.</span></h2>
+      <ul class="boxes">
+        <li><a href="#foto"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Fotografka</a></li>
+        <li><a href="#web"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Web designer</a></li>
+        <li><a href="#biznes"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Project manager</a></li>
+        <li><a href="#eventy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Organizatorka eventów i rajdów</a></li>
+        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Założycielka fundacji</a></li>
+        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni TIYATI</a></li>
+      </ul>
+      <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
+    </div>
     </div>
   </div>
 </section>
@@ -1254,7 +1294,7 @@ $('#lbStage').addEventListener('pointerup', e => {
 </script>
 <a class="foto-cta" id="fotoCta" href="oferta.html" aria-label="Oferta fotograficzna: sesje i reportaże">
   <span class="fc-c tl"></span><span class="fc-c tr"></span><span class="fc-c bl"></span><span class="fc-c br"></span>
-  <svg class="ap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.3 3.3 8.5 13.3M20.7 9.6H9.2M18.6 18.1 12.9 8.1M9.7 20.7l5.8-10M3.3 14.4h11.5M5.4 5.9l5.7 10"/></svg><span class="fc-t"><b>Oferta foto</b><small>sesje · reportaże</small></span>
+  <svg class="ap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M14.3 3.3 8.5 13.3M20.7 9.6H9.2M18.6 18.1 12.9 8.1M9.7 20.7l5.8-10M3.3 14.4h11.5M5.4 5.9l5.7 10"/></svg><span class="fc-t"><b>Oferta foto</b><small>naturalnie, z charakterem</small></span>
 </a>
 <script>
 (() => {
@@ -1263,6 +1303,18 @@ $('#lbStage').addEventListener('pointerup', e => {
   const lim = () => hero ? hero.offsetTop + hero.offsetHeight * .8 : innerHeight;
   const on = () => b.classList.toggle('show', scrollY > lim());
   addEventListener('scroll', on, { passive: true }); on();
+})();
+</script>
+<script>
+(() => {
+  const m = document.getElementById('rootsMap'); if (!m) return;
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { m.classList.add('grown'); io.disconnect(); } }), { threshold: .25 });
+  io.observe(m);
+  m.querySelectorAll('.lab-item').forEach(a => {
+    const on = () => m.dataset.on = a.dataset.r, off = () => delete m.dataset.on;
+    a.addEventListener('mouseenter', on); a.addEventListener('focus', on);
+    a.addEventListener('mouseleave', off); a.addEventListener('blur', off);
+  });
 })();
 </script>
 </body>
