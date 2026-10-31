@@ -57,7 +57,10 @@
         }
         x += Math.cos(a) * step; y += Math.sin(a) * step;
         if (!target && (y > H + 4 || y < jy * .6)) break;
-        if (target && y >= target.y) { pts.push({ x: target.x, y: target.y, w: .5, o: o0 + (i + 1) * step, fx: 1 }); break; }
+        if (target) {
+          const reached = target.y > H ? y >= target.y : Math.hypot(target.x - x, target.y - y) < step * 1.5;
+          if (reached) { pts.push({ x: target.x, y: target.y, w: .5, o: o0 + (i + 1) * step, fx: 1 }); break; }
+        }
         // rozgałęzienia
         if (depth < 3 && w > .9 && r() < (depth ? .07 : .09) && i > 3) {
           const side = r() < .5 ? -1 : 1;
@@ -96,7 +99,7 @@
       if (!mains[a] || !mains[b]) return;
       const pa = mains[a][Math.floor(mains[a].length * (.55 + r() * .1))];
       const pb = mains[b][Math.floor(mains[b].length * (.62 + r() * .1))];
-      const p = grow1(pa.x, pa.y, Math.atan2(pb.y - pa.y, pb.x - pa.x) + (r() < .5 ? -.6 : .6), Math.hypot(pb.x - pa.x, pb.y - pa.y) * 1.25, 1.6 * S, g, 2, pa.o, { x: pb.x, y: pb.y });
+      const p = grow1(pa.x, pa.y, Math.atan2(pb.y - pa.y, pb.x - pa.x) + (r() < .5 ? -.6 : .6), Math.hypot(pb.x - pa.x, pb.y - pa.y) * 1.6, 1.6 * S, g, 2, pa.o, { x: pb.x, y: pb.y });
       roots[roots.length - 1].link = true;
     };
     link(0, 1, 'l12'); link(1, 2, 'l23');
