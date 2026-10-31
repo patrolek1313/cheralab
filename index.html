@@ -673,6 +673,18 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 }
 .nav a.lang{border:1px solid rgba(160,170,139,.45);padding:6px 10px;border-radius:2px;font-size:.78em}
 @media (min-width:981px) and (max-width:1340px){.nav{gap:14px}.nav a{letter-spacing:.07em;font-size:.72rem}.nav .ap{display:none}.nav .nav-oferta,.nav .cta{padding:8px 11px}.brand img{height:62px!important}}
+#inicjatywy{position:relative;background:var(--area3);padding-top:clamp(20px,3vw,40px)!important;padding-bottom:clamp(80px,9vw,130px)}
+.init-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.init{display:flex;flex-direction:column;gap:12px;padding:clamp(24px,3vw,36px);border:1px solid var(--line);border-top:2px solid var(--lime);border-radius:6px;background:rgba(245,240,232,.02);text-decoration:none;color:inherit;transition:border-color .3s,transform .5s var(--ease)}
+.init:hover,.init:focus-visible{border-color:var(--lime);transform:translateY(-3px)}
+.init small{font-stretch:80%;font-weight:600;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--lime)}
+.init h3{font-family:var(--display);font-weight:600;text-transform:uppercase;font-size:clamp(1.3rem,1.8vw,1.6rem);line-height:1.12}
+.init p{color:var(--muted)}
+.init p strong{color:var(--ink);font-weight:600}
+.init-go{margin-top:auto;padding-top:10px;font-stretch:80%;font-weight:600;font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink)}
+.init-go i{font-style:normal;color:var(--lime);margin-left:.4em}
+.ev-list a{color:var(--ink);text-decoration-color:var(--lime);text-underline-offset:3px}
+@media (max-width:820px){.init-grid{grid-template-columns:1fr}}
 </style>
 <link rel="canonical" href="https://cheralab.eu/">
 <meta property="og:type" content="website">
@@ -760,6 +772,18 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
    "worksFor": {
     "@id": "https://cheralab.eu/#chera-lab"
    },
+   "affiliation": [
+    {
+     "@type": "NGO",
+     "name": "Fundacja Inteligentna Transformacja",
+     "url": "https://inteligentnatransformacja.org.pl/"
+    },
+    {
+     "@type": "Brand",
+     "name": "TIYATI",
+     "url": "https://tiyati.co.uk/"
+    }
+   ],
    "sameAs": [
     "https://www.linkedin.com/in/katarzynawojcik1"
    ]
@@ -853,8 +877,8 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
         <li><a href="#web"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Web designer</a></li>
         <li><a href="#biznes"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Project manager</a></li>
         <li><a href="#eventy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Organizatorka eventów i rajdów</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Założycielka fundacji</a></li>
-        <li><a href="#o-mnie"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni marki TIYATI</a></li>
+        <li><a href="#inicjatywy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współzałożycielka fundacji FIT</a></li>
+        <li><a href="#inicjatywy"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7"/></svg>Współtwórczyni marki TIYATI</a></li>
       </ul>
       <p class="form-foot">Każda z tych rubryk karmi pozostałe. Chemia uczy procesu, biznes - decyzji, motorsport - spokoju pod presją, a fotografia - uważności na ludzi.</p>
     </div>
@@ -1086,7 +1110,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
       </figure>
       <div class="ev-list">
         <article class="rv"><b>01</b><h3>Rajdy i off-road</h3><p>Koncepcja, trasa, logistyka, ludzie i bezpieczeństwo. Wiem, jak rajd wygląda z perspektywy załogi, organizatora i fotografa.</p></article>
-        <article class="rv"><b>02</b><h3>Konferencje i wydarzenia</h3><p>Organizowałam międzynarodowe konferencje naukowe. Dziś koordynuję wydarzenia, szkolenia i programy fundacji.</p></article>
+        <article class="rv"><b>02</b><h3>Konferencje i wydarzenia</h3><p>Organizowałam międzynarodowe konferencje naukowe. Dziś koordynuję wydarzenia, szkolenia i programy <a href="https://inteligentnatransformacja.org.pl/" target="_blank" rel="noopener">Fundacji Inteligentna Transformacja</a>.</p></article>
         <article class="rv"><b>03</b><h3>Obraz i komunikacja</h3><p>Z jednego wydarzenia mogą powstać trzy rzeczy: sam event, zdjęcia i strona internetowa. Organizacja, photobłoto i web design w jednych rękach.</p></article>
       </div>
     </div>
@@ -1100,7 +1124,35 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
   </div>
 </section>
 
+<!-- FUNDACJA I MARKA -->
+<section class="sec" id="inicjatywy">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <div class="label"><span class="n">03.3</span>Fundacja · Marka</div>
+        <h2 class="h2">Poza zleceniami. <span class="serif">Rzeczy, które współtworzę.</span></h2>
+      </div>
+      <p>Chera Lab to nie jedyne moje korzenie. Współtworzę fundację, która uczy dorosłych korzystać z technologii, i markę naturalnych kosmetyków. <strong>Dzięki temu wiem, jak technologia i marka działają w praktyce, a nie tylko na slajdzie.</strong></p>
+    </div>
+    <div class="init-grid">
+      <a class="init rv" href="https://inteligentnatransformacja.org.pl/" target="_blank" rel="noopener">
+        <small>Fundacja · współzałożycielka i dyrektor operacyjny</small>
+        <h3>Fundacja Inteligentna Transformacja</h3>
+        <p>Fundacja, która pomaga ludziom i organizacjom przejść przez zmianę technologiczną bez lęku. Prowadzę operacje, programy i wydarzenia, w tym <strong>FIT 40+</strong> - edukację o AI i nowych technologiach dla profesjonalistów po czterdziestce.</p>
+        <span class="init-go">inteligentna.org.pl<i>↗</i></span>
+      </a>
+      <a class="init rv" href="https://tiyati.co.uk/" target="_blank" rel="noopener">
+        <small>Marka · współtwórczyni</small>
+        <h3>TIYATI</h3>
+        <p>Londyńska marka naturalnych europejskich kosmetyków: wegańskich i organicznych. Wyróżniają ją <strong>przejrzyste perfumy na bazie wody, bez alkoholu</strong>, komponowane w Grasse. Tu chemia spotyka się z marką i estetyką.</p>
+        <span class="init-go">tiyati.co.uk<i>↗</i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- KONTAKT -->
+<section class="contact" id="kontakt">
 <section class="contact" id="kontakt">
   <div class="wrap rv">
     <div class="label"><span class="n">04</span>Współpraca · Kontakt</div>
@@ -1537,7 +1589,7 @@ $('#lbStage').addEventListener('pointerup', e => {
 </script>
 <script>
 (() => {
-  const map = { 'chera-lab': '#o-mnie', 'web': '#web', 'dla-firm': '#dla-firm', 'foto': '#foto', 'biznes': '#biznes', 'eventy': '#biznes', 'kontakt': '#kontakt' };
+  const map = { 'chera-lab': '#o-mnie', 'web': '#web', 'dla-firm': '#dla-firm', 'foto': '#foto', 'biznes': '#biznes', 'eventy': '#biznes', 'inicjatywy': '#biznes', 'kontakt': '#kontakt' };
   const links = [...document.querySelectorAll('#nav a')];
   const io = new IntersectionObserver(es => es.forEach(e => {
     if (!e.isIntersecting) return;
