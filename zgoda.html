@@ -105,7 +105,7 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-si
     <fieldset>
       <legend>Informacja o danych osobowych (RODO)</legend>
       <div class="clause">
-        <p>Administratorem Twoich danych (wizerunku, imienia i nazwiska, danych kontaktowych) jest <strong>Katarzyna Wójcik, Chera Lab Photography</strong>, kontakt: <a href="mailto:katarzynawojcik1@gmail.com">katarzynawojcik1@gmail.com</a>.</p>
+        <p>Administratorem Twoich danych (wizerunku, imienia i nazwiska, danych kontaktowych) jest <strong>Katarzyna Wójcik, Chera Lab Photography</strong>, kontakt: <a href="mailto:hello@cheralab.eu">hello@cheralab.eu</a>.</p>
         <ul>
           <li><strong>Cel:</strong> publikacja zdjęć w zakresie zaznaczonym powyżej oraz przechowywanie dowodu Twojej zgody.</li>
           <li><strong>Podstawa:</strong> Twoja zgoda (art. 6 ust. 1 lit. a RODO) oraz zezwolenie na rozpowszechnianie wizerunku (art. 81 ustawy o prawie autorskim).</li>
@@ -127,12 +127,12 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);font-si
     </div>
     <div class="ok" id="ok" role="status">
       <h2>Prawie gotowe</h2>
-      <p>Otworzyła się wiadomość e-mail z treścią zgody. Wystarczy ją <strong>wysłać</strong>. Jeśli nic się nie otworzyło, skopiuj treść i wyślij ją na <a href="mailto:katarzynawojcik1@gmail.com">katarzynawojcik1@gmail.com</a>.</p>
+      <p>Otworzyła się wiadomość e-mail z treścią zgody. Wystarczy ją <strong>wysłać</strong>. Jeśli nic się nie otworzyło, skopiuj treść i wyślij ją na <a href="mailto:hello@cheralab.eu">hello@cheralab.eu</a>.</p>
       <div class="btns" style="margin-top:12px"><button class="btn line" type="button" id="kopiuj">Skopiuj treść zgody</button></div>
     </div>
   </form>
 
-  <footer>Chera Lab Photography · Zgodę możesz wycofać w każdej chwili, pisząc na katarzynawojcik1@gmail.com. <a href="polityka-prywatnosci.html">Polityka prywatności</a></footer>
+  <footer>Chera Lab Photography · Zgodę możesz wycofać w każdej chwili, pisząc na hello@cheralab.eu. <a href="polityka-prywatnosci.html">Polityka prywatności</a></footer>
 </div>
 
 <script>
@@ -175,7 +175,7 @@ f.addEventListener('submit', e => {
   err.hidden = true;
   tekst = zbuduj();
   const temat = 'Zgoda na wizerunek - ' + d.get('imie');
-  location.href = 'mailto:katarzynawojcik1@gmail.com?subject=' + encodeURIComponent(temat) + '&body=' + encodeURIComponent(tekst);
+  location.href = 'mailto:hello@cheralab.eu?subject=' + encodeURIComponent(temat) + '&body=' + encodeURIComponent(tekst);
   document.getElementById('ok').classList.add('on');
 });
 document.getElementById('kopiuj').addEventListener('click', async e => {
