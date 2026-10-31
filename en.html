@@ -611,7 +611,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .svc-note{margin-top:22px;color:rgba(245,240,232,.86);max-width:52em}
 .svc-note em{font-family:var(--serif);font-size:1.2em;color:var(--lime)}
 .firm-sub{margin-top:clamp(50px,6vw,80px);margin-bottom:22px}
-.packs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(12px,1.6vw,20px)}
 .pk{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);padding:clamp(20px,2.2vw,28px);background:linear-gradient(180deg,rgba(160,170,139,.05),rgba(160,170,139,0) 60%);transition:border-color .3s,transform .3s}
 .pk:hover{border-color:rgba(160,170,139,.6);transform:translateY(-4px)}
 .pk.star{border-color:var(--lime);background:linear-gradient(180deg,rgba(160,170,139,.14),rgba(160,170,139,0) 70%)}
@@ -636,7 +636,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .steps3 h4{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:6px 0}
 .steps3 p{color:rgba(245,240,232,.82);font-weight:400}
 .firm .ev-cta{margin-top:clamp(36px,4vw,56px)}
-@media (max-width:1000px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1000px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.packs,.svc,.terms,.steps3{grid-template-columns:1fr}.pk-tag{left:16px}}
 
 /* ================= OBSZARY: każdy ma swój odcień zieleni ================= */
@@ -743,7 +743,14 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
     "itemListElement": [
      {
       "@type": "Offer",
-      "name": "Strona Start",
+      "name": "Strona Ekspres",
+      "price": "1000",
+      "priceCurrency": "PLN",
+      "url": "https://cheralab.eu/#dla-firm"
+     },
+     {
+      "@type": "Offer",
+      "name": "Strona Start z rezerwacjami online",
       "price": "2400",
       "priceCurrency": "PLN",
       "url": "https://cheralab.eu/#dla-firm"
@@ -765,7 +772,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
      {
       "@type": "Offer",
       "name": "Opieka nad stroną (miesięcznie)",
-      "price": "390",
+      "price": "100",
       "priceCurrency": "PLN",
       "url": "https://cheralab.eu/#dla-firm"
      },
@@ -999,15 +1006,15 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 
     <div class="label firm-sub rv">Pricing · fixed price, no surprises at the end</div>
     <div class="packs rv">
-      <article class="pk"><h4>Start</h4><p class="pk-price">PLN 2,400</p><p class="pk-time">2-3 weeks</p><ul><li>1 page, up to 6 sections, on a proven layout adapted to your brand</li><li>Your copy, edited by me</li><li>Contact form and privacy policy</li><li>Google Maps profile and SEO basics</li><li>2 rounds of revisions</li><li class="no">No logo, language version or editing panel</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Start">I choose Start</a></article>
+      <article class="pk"><h4>Express</h4><p class="pk-tag2">fast track</p><p class="pk-price">PLN 1,000</p><p class="pk-time">5 working days</p><ul><li>1 page on my ready-made layout</li><li>You provide everything: copy, photos, logo and details in one form</li><li>Contact form and privacy policy</li><li>1 round of revisions, no meetings</li><li class="no">Work starts once all materials are in</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Ekspres">I choose Express</a></article>
+      <article class="pk"><h4>Start</h4><p class="pk-price">PLN 2,400</p><p class="pk-time">2-3 weeks</p><ul><li>1 page, up to 6 sections, on a proven layout adapted to your brand</li><li><strong>Online booking or sign-ups with reminders</strong></li><li>Your copy, edited by me</li><li>Form, privacy policy, Google Maps and SEO basics</li><li>2 rounds of revisions</li><li class="no">No logo, language version or editing panel</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Start">I choose Start</a></article>
       <article class="pk star"><p class="pk-tag">Most popular</p><h4>Business</h4><p class="pk-price">PLN 5,900</p><p class="pk-time">5-6 weeks</p><ul><li>Up to 5 pages, custom design</li><li>Interview and copy for all pages</li><li>Form, privacy policy, Google Maps, SEO</li><li>1 automation: booking, AI assistant or quote templates</li><li>2 h of team training</li><li>3 rounds of revisions</li><li class="no">No logo or language version</li></ul><a class="btn primary" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Firma">I choose Business</a></article>
       <article class="pk"><h4>AI at work</h4><p class="pk-tag2">no website</p><p class="pk-price">PLN 3,900</p><p class="pk-time">3-4 weeks</p><ul><li>A conversation about what eats up your time</li><li>2 automations</li><li>2 h of team training</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20AI%20w%20firmie">I choose AI at work</a></article>
-      <article class="pk"><h4>Care</h4><p class="pk-tag2">subscription</p><p class="pk-price">PLN 390 <small>/ month</small></p><p class="pk-time">monthly</p><ul><li>Fixes and new content, up to 2 h a month</li><li>Updates</li><li>AI support</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20Opieka">Ask about care</a></article>
+      <article class="pk"><h4>Care</h4><p class="pk-tag2">subscription</p><p class="pk-price">PLN 100 <small>/ month</small></p><p class="pk-time">monthly</p><ul><li>Monitoring and updates</li><li>Small changes up to 30 min a month</li><li>Email support</li><li class="no">Bigger changes: PLN 150 / h</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20Opieka">Ask about care</a></article>
     </div>
     <p class="pk-extra rv"><b>Extras:</b> logo from PLN 2,500 · language version from PLN 1,000 · extra page from PLN 500 · additional revision round PLN 150 / h</p>
     <ul class="terms rv">
-      <li><b>For the first 3 businesses</b> 20% off in exchange for a short review and permission to show the project in my portfolio.</li>
-      <li><b>Payment</b> 50% upfront, 50% on delivery.</li>
+      <li><b>Risk-free concept</b> You pay 50% only after approving the design, 50% on delivery. If you don't like the concept, you pay nothing.</li>
       <li><b>Everything is yours</b> - website, domain and tools. You pay providers directly for paid services, with no markup from me.</li>
       <li><b>At most 2 new projects</b> a month, so each one gets my full attention.</li>
     </ul>

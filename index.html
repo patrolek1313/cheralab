@@ -611,7 +611,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .svc-note{margin-top:22px;color:rgba(245,240,232,.86);max-width:52em}
 .svc-note em{font-family:var(--serif);font-size:1.2em;color:var(--lime)}
 .firm-sub{margin-top:clamp(50px,6vw,80px);margin-bottom:22px}
-.packs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.6vw,20px)}
+.packs{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:clamp(12px,1.6vw,20px)}
 .pk{position:relative;display:flex;flex-direction:column;border:1px solid var(--line);padding:clamp(20px,2.2vw,28px);background:linear-gradient(180deg,rgba(160,170,139,.05),rgba(160,170,139,0) 60%);transition:border-color .3s,transform .3s}
 .pk:hover{border-color:rgba(160,170,139,.6);transform:translateY(-4px)}
 .pk.star{border-color:var(--lime);background:linear-gradient(180deg,rgba(160,170,139,.14),rgba(160,170,139,0) 70%)}
@@ -636,7 +636,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 .steps3 h4{font-family:var(--serif);font-weight:500;font-size:1.5rem;margin:6px 0}
 .steps3 p{color:rgba(245,240,232,.82);font-weight:400}
 .firm .ev-cta{margin-top:clamp(36px,4vw,56px)}
-@media (max-width:1000px){.packs{grid-template-columns:repeat(2,minmax(0,1fr))}.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1000px){.svc{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:640px){.packs,.svc,.terms,.steps3{grid-template-columns:1fr}.pk-tag{left:16px}}
 
 /* ================= OBSZARY: każdy ma swój odcień zieleni ================= */
@@ -743,7 +743,14 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
     "itemListElement": [
      {
       "@type": "Offer",
-      "name": "Strona Start",
+      "name": "Strona Ekspres",
+      "price": "1000",
+      "priceCurrency": "PLN",
+      "url": "https://cheralab.eu/#dla-firm"
+     },
+     {
+      "@type": "Offer",
+      "name": "Strona Start z rezerwacjami online",
       "price": "2400",
       "priceCurrency": "PLN",
       "url": "https://cheralab.eu/#dla-firm"
@@ -765,7 +772,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
      {
       "@type": "Offer",
       "name": "Opieka nad stroną (miesięcznie)",
-      "price": "390",
+      "price": "100",
       "priceCurrency": "PLN",
       "url": "https://cheralab.eu/#dla-firm"
      },
@@ -999,15 +1006,15 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 
     <div class="label firm-sub rv">Cennik · stała cena, bez dopisków na końcu</div>
     <div class="packs rv">
-      <article class="pk"><h4>Start</h4><p class="pk-price">2 400 zł</p><p class="pk-time">2-3 tygodnie</p><ul><li>1 strona, do 6 sekcji, na sprawdzonym układzie dopasowanym do Twojej marki</li><li>Twoje teksty, ja je redaguję</li><li>Formularz kontaktowy i polityka prywatności</li><li>Profil w Mapach Google i podstawy SEO</li><li>2 rundy poprawek</li><li class="no">Bez logo, wersji językowej i panelu do edycji</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Start">Wybieram Start</a></article>
+      <article class="pk"><h4>Ekspres</h4><p class="pk-tag2">szybka realizacja</p><p class="pk-price">1 000 zł</p><p class="pk-time">5 dni roboczych</p><ul><li>1 strona na moim gotowym układzie</li><li>Ty dostarczasz komplet: teksty, zdjęcia, logo i dane w jednym formularzu</li><li>Formularz kontaktowy i polityka prywatności</li><li>1 runda poprawek, bez spotkań</li><li class="no">Start po otrzymaniu kompletu materiałów</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Ekspres">Wybieram Ekspres</a></article>
+      <article class="pk"><h4>Start</h4><p class="pk-price">2 400 zł</p><p class="pk-time">2-3 tygodnie</p><ul><li>1 strona, do 6 sekcji, na sprawdzonym układzie dopasowanym do Twojej marki</li><li><strong>Rezerwacje lub zapisy online z przypomnieniami</strong></li><li>Twoje teksty, ja je redaguję</li><li>Formularz, polityka prywatności, Mapy Google i podstawy SEO</li><li>2 rundy poprawek</li><li class="no">Bez logo, wersji językowej i panelu do edycji</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Start">Wybieram Start</a></article>
       <article class="pk star"><p class="pk-tag">Najczęściej wybierany</p><h4>Firma</h4><p class="pk-price">5 900 zł</p><p class="pk-time">5-6 tygodni</p><ul><li>Do 5 podstron, indywidualny projekt</li><li>Wywiad i teksty do wszystkich podstron</li><li>Formularz, polityka prywatności, Mapy Google, SEO</li><li>1 automatyzacja: rezerwacje, asystent AI lub szablony ofert</li><li>2 h szkolenia zespołu</li><li>3 rundy poprawek</li><li class="no">Bez logo i wersji językowej</li></ul><a class="btn primary" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20Firma">Wybieram Firmę</a></article>
       <article class="pk"><h4>AI w firmie</h4><p class="pk-tag2">bez strony</p><p class="pk-price">3 900 zł</p><p class="pk-time">3-4 tygodnie</p><ul><li>Rozmowa o tym, co zjada Wam czas</li><li>2 automatyzacje</li><li>2 h szkolenia zespołu</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20pakiet%20AI%20w%20firmie">Wybieram AI w firmie</a></article>
-      <article class="pk"><h4>Opieka</h4><p class="pk-tag2">abonament</p><p class="pk-price">390 zł <small>/ mies.</small></p><p class="pk-time">co miesiąc</p><ul><li>Poprawki i nowe treści do 2 h w miesiącu</li><li>Aktualizacje</li><li>Wsparcie przy AI</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20Opieka">Zapytaj o opiekę</a></article>
+      <article class="pk"><h4>Opieka</h4><p class="pk-tag2">abonament</p><p class="pk-price">100 zł <small>/ mies.</small></p><p class="pk-time">co miesiąc</p><ul><li>Kontrola działania i aktualizacje</li><li>Drobne zmiany do 30 min w miesiącu</li><li>Wsparcie mailowe</li><li class="no">Większe zmiany: 150 zł / h</li></ul><a class="btn ghost" href="mailto:katarzynawojcik1@gmail.com?subject=AI%20dla%20mojej%20firmy%20-%20Opieka">Zapytaj o opiekę</a></article>
     </div>
     <p class="pk-extra rv"><b>Poza pakietem:</b> logo od 2 500 zł · wersja językowa od 1 000 zł · dodatkowa podstrona od 500 zł · kolejna runda poprawek 150 zł / h</p>
     <ul class="terms rv">
-      <li><b>Dla pierwszych 3 firm</b> 20% rabatu w zamian za krótką opinię i zgodę na pokazanie projektu w portfolio.</li>
-      <li><b>Płatność</b> 50% przed startem, 50% po odbiorze.</li>
+      <li><b>Koncepcja bez ryzyka</b> Płacisz 50% dopiero po akceptacji projektu, 50% po odbiorze. Jeśli koncepcja Ci nie odpowiada, nic nie płacisz.</li>
       <li><b>Wszystko jest Twoje</b> - strona, domena i narzędzia. Płatne usługi opłacasz u dostawcy, bez mojej marży.</li>
       <li><b>Maksymalnie 2 nowe projekty</b> w miesiącu, żeby każdy dostał pełną uwagę.</li>
     </ul>
