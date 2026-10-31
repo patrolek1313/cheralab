@@ -10,10 +10,8 @@
 <title>Chera Lab · fotografia, strony i AI dla firm</title>
 <meta name="description" content="Chera Lab - Katarzyna Wójcik: fotografia off-road, wyścigów ultra i wydarzeń (Chera Lab Photography), projektowanie stron internetowych i AI dla małych firm.">
 <meta name="theme-color" content="#13201a">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://patrolek1313.github.io" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="fonts.css">
 <style>
 :root{
   --bg:#13201a;          /* prawie czarny szmaragd */
@@ -1197,6 +1195,7 @@ h1,h2,h3,h4,.h2,.hero h1,.ticker span,.card h3,.card.next b,.steps h4,.ev-list h
 <footer>
   <span>© <span id="yr"></span> Chera Lab · Katarzyna Wójcik</span>
   <span>Wszystkie zdjęcia: Chera Lab Photography</span>
+  <a href="polityka-prywatnosci.html" style="color:inherit">Polityka prywatności</a>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -1623,7 +1622,8 @@ $('#lbStage').addEventListener('pointerup', e => {
   const b = document.getElementById('fotoCta'), intro = document.querySelector('.intro');
   const hero = document.getElementById('start');
   const lim = () => hero ? hero.offsetTop + hero.offsetHeight * .8 : innerHeight;
-  const on = () => b.classList.toggle('show', scrollY > lim());
+  const foot = document.querySelector('footer');
+  const on = () => b.classList.toggle('show', scrollY > lim() && !(foot && foot.getBoundingClientRect().top < innerHeight - 20));
   addEventListener('scroll', on, { passive: true }); on();
 })();
 </script>
